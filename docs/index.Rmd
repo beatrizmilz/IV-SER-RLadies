@@ -14,7 +14,60 @@ output:
       highlightLines: true
       countIncrementalSlides: false
 ---
+class: split-two with-border
+.column.bg-main1[.content[
+# Instrutoras
+## Beatriz Milz
 
+```{r echo=FALSE, out.width="100%"}
+knitr::include_graphics("img/foto_bia.jpg")
+```
+]]
+.column.bg-main2[.content[
+
+- Doutoranda em Ciência Ambiental no PROCAM/IEE/USP. 
+
+- Co-organizadora do R-Ladies São Paulo.
+
+- Assessora Editorial na <a href="http://scielo.br/asoc">Revista Ambiente e Sociedade</a> 
+- Bacharel em Gestão Ambiental (EACH/USP).
+
+- Mestre em Ciências no PPG-Análise Ambiental Integrada (UNIFESP/Diadema). 
+
+- Email: <a href="mailto:beatriz.milz@hotmail.com">beatriz.milz@hotmail.com</a>
+
+- Página: https://beatrizmilz.github.io/
+
+- Github:<a href="http://github.com/beatrizmilz">@beatrizmilz</a> 
+
+- Twitter: <a href="http://twitter.com/beatrizmilz">@BeaMilz</a> 
+
+]]
+
+
+---
+class: split-two with-border
+.column.bg-main1[.content[
+# Instrutoras
+## Haydee Svab
+
+```{r echo=FALSE, out.width="100%"}
+knitr::include_graphics("img/foto_haydee.JPG")
+```
+]]
+.column.bg-main2[.content[
+
+- É pesquisadora em mobilidade urbana e ativista pela equidade de gênero e pelo direito à cidade. 
+- Atualmente é consultora do Banco Mundial, CEO da ASK-AR (consultoria em análise de dados), membro do Conselho Deliberativo da AEAMESP (Associação dos Engenheiros e Arquitetos de Metrô) e da comunidade Transparência Hacker.
+
+- É co-fundadora dos grupos RLadies - São Paulo, do PoliGNU (Grupo de Estudos de Software Livre da Poli-USP) e da PoliGen (Grupo de Estudos de Gênero da Poli-USP).
+
+- Cursa doutorado em Smart Cities pelo IME-USP, é mestra em Engenharia e Planejamento de Transportes (Poli-USP) e especialista em Democracia Participativa, Repúblicas e Movimentos Sociais (UFMG) além de ter formação em Engenharia Civil/Arquitetura pela USP (Programa Poli-FAU).
+
+]]
+
+
+---
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, fig.align = "center")
 ```
@@ -92,10 +145,10 @@ members = c(22, 114, 289, 151, 509,
 )
 
 ```
-Atualizado em: 13/04/2019
+Atualizado em: 13/04/2019. Fonte: [R-Ladies Shiny App](https://gqueiroz.shinyapps.io/rshinylady/) 
 
 ```{r}
-DT::datatable(rladies_br)
+DT::datatable(rladies_br, autoHideNavigation = TRUE)
 ```
 
 ---
