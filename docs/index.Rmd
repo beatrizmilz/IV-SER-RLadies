@@ -533,6 +533,46 @@ output:
 ```
 
 - Criado por/Made by: [Emi Tanaka](https://github.com/emitanaka/ninja-theme)
+
+---
+class: middle
+## Chuncks de Código R
+
+- É um campo onde podemos inserir código de R em um arquivo Rmarkdown:
+
+```{r echo=FALSE, fig.align='center'}
+knitr::include_graphics("img/chunk.png")
+```
+
+- É uma boa ideia dar a cada chunck um nome, pois ele podem ajudar a corrigir erros, e, se quaisquer gráficos são produzidos, os nomes dos arquivos serão baseados no nome do chunck de código que os produzirem.
+
+
+---
+class: middle
+## Como criar um chunck de código?
+
+```{r echo=FALSE, fig.align='center', out.width="100%"}
+knitr::include_graphics("img/8.PNG")
+```
+ 
+Dica: Atalho do teclado para criar chunks:  `Ctrl + ALt + I`.
+
+
+---
+class: middle
+## Como as coisas são compiladas?
+
+- Quando você pressiona o botão “Knit HTML”, o documento R Markdown é processado pelo knitr e um documento Markdown é produzido (como, também, um potencial conjunto de arquivos de figuras): o código em R é executado e substituído pelo input e output; se figuras são produzidas, links para essas figuras serão incluídos.
+
+- A seguir, os documentos Markdown e de figuras  são processados pela ferramenta pandoc, que converte o arquivo Markdown em um arquivo html, com as figuras anexadas.
+
+
+```{r echo=FALSE, fig.align='center', out.width="100%"}
+knitr::include_graphics("img/rmd-15-rmd_to_html_fig-1.png")
+```
+
+Referência: [SW Carpentry](https://swcarpentry.github.io/r-novice-gapminder/15-knitr-markdown/index.html)
+
 ---
 class:  middle
 
@@ -559,6 +599,7 @@ knitr::include_graphics("img/7.PNG")
 
 - Aperte H ou ? para conferir a lista de atalhos do xaringan. 
 ---
+class: middle
 ## DEU ERRO NO KNITR!
 
 Calma! É bem comum dar erro ao compliar o arquivo pois **qualquer** código errado causa isso. Algumas coisas pra se observar:
@@ -570,51 +611,6 @@ Calma! É bem comum dar erro ao compliar o arquivo pois **qualquer** código err
 ```{r echo=FALSE, out.width="30%"}
 knitr::include_graphics("https://media.giphy.com/media/j9GASQ5ocrIRicnmyq/giphy.gif")
 ```
----
-
-
-
----
-class: middle
-## Chuncks de Código R
-
-Markdown é interessante e útil, mas seu real poder vem da combinação de Markdown com chuncks de códigos em R. 
-Isso  é o Markdown. Quando processado, o código em R será executado; se ele produz figuras, as figuras serão inseridas ao final do documento.
-
-```{r echo=FALSE, fig.align='center'}
-knitr::include_graphics("img/chunk.png")
-```
-
-- É uma boa ideia dar a cada chunck um nome, pois ele podem ajudar a corrigir erros, e, se quaisquer gráficos são produzidos, os nomes dos arquivos serão baseados no nome do chunck de código que os produzirem.
-
-
-Referência: [SW Carpentry](https://swcarpentry.github.io/r-novice-gapminder/15-knitr-markdown/index.html)
----
-class: middle
-## Como criar um chunck de código?
-
-```{r echo=FALSE, fig.align='center'}
-knitr::include_graphics("img/8.PNG")
-```
- 
-Dica: Atalho do teclado para criar chunks:  `Ctrl + ALt + I`.
-
-
----
-class: middle
-## Como as coisas são compiladas?
-
-- Quando você pressiona o botão “Knit HTML”, o documento R Markdown é processado pelo knitr e um documento Markdown é produzido (como, também, um potencial conjunto de arquivos de figuras): o código em R é executado e substituído pelo input e output; se figuras são produzidas, links para essas figuras serão incluídos.
-
-- A seguir, os documentos Markdown e de figuras  são processados pela ferramenta pandoc, que converte o arquivo Markdown em um arquivo html, com as figuras anexadas.
-
-
-```{r echo=FALSE, fig.align='center'}
-knitr::include_graphics("img/rmd-15-rmd_to_html_fig-1.png")
-```
-
-Referência: [SW Carpentry](https://swcarpentry.github.io/r-novice-gapminder/15-knitr-markdown/index.html)
-
 
 ---
 class: middle
@@ -700,24 +696,20 @@ Exemplo: O dataframe mtcars possui `r nrow(mtcars)` carros.
 ---
 class: middle
 ## Exemplo: adicionando um gráfico
-```{r}
-attach(mtcars)
-plot(wt, mpg, main="Exemplo de Gráfico de Dispersão",
-xlab="Peso do Carro ", ylab="Milhas Por Galão ", pch=19)
-```
----
-class: middle
-## Exemplo: adicionando uma tabela simples
 
-```{r }
-head(mtcars)
+- Crie um chunk, e escreva o código que você geralmente utiliza para criar um gráfico :) 
+
+```{r message=FALSE, warning=FALSE, out.width="80%"}
+library(tidyverse)
+ggplot(data = mtcars, mapping = aes(x = wt, y = mpg)) + geom_point() + 
+  stat_smooth(method = 'lm') + facet_grid(am ~ cyl)
 ```
+Fonte do exemplo: http://stcorp.nl/R_course/tutorial_ggplot2.html
 ---
 class: middle
-## Exemplo: adicionando uma tabela
+** Exemplo: adicionando uma tabela** - Dica: Usar a função DT::datatable()
 ```{r}
-DT::datatable(head(mtcars, 10),
-  fillContainer = TRUE, options = list(pageLength = 5))
+DT::datatable(rladies_br)
 ```
 ---
 class: middle
@@ -814,8 +806,13 @@ pagedown::chrome_print("index.html")
 
 
 Referência: [Apresentação do Yihui na RStudio Conf 2019: pagedown - Creating beautiful PDFs with R Markdown and CSS](https://resources.rstudio.com/rstudio-conf-2019/pagedown-creating-beautiful-pdfs-with-r-markdown-and-css)
----
 
+---
+Referências
+- [SW Carpentry](https://swcarpentry.github.io/r-novice-gapminder/15-knitr-markdown/index.html)
+- [Apresentação do Yihui na RStudio Conf 2019: pagedown - Creating beautiful PDFs with R Markdown and CSS](https://resources.rstudio.com/rstudio-conf-2019/pagedown-creating-beautiful-pdfs-with-r-markdown-and-css)
+
+---
 class:  middle
 
 # Obrigada!
