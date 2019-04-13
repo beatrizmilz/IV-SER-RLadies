@@ -1,0 +1,25 @@
+---
+title: "Comunicando seus resultados: "
+subtitle: "Criando apresentações com R"
+author: "Beatriz Milz e Haydee Svab - R-Ladies São Paulo"
+date: "20 de maio de 2019  <br> (Atualizado em: `r format(Sys.Date(), format='%d/%m/%Y')`)"
+encoding: "UTF-8"
+output:
+  xaringan::moon_reader:
+    chakra: libs/remark-latest.min.js
+    css: [default, rladies, robot-fonts]
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, fig.align = "center")
+```
+
+xaringan::summon_remark()
+https://remarkjs.com/downloads/remark-latest.min.js
+
+
