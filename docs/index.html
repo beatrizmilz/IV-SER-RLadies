@@ -28,12 +28,16 @@ class: center, middle, inverse, title-slide
 
 ---
 
+
+
+
+
 class: split-two with-border
 .column.bg-main1[.content[
 # Instrutoras
 ## Beatriz Milz
 
-&lt;img src="img/foto_bia.jpg" width="100%" /&gt;
+&lt;img src="img/foto_bia.jpg" width="100%" style="display: block; margin: auto;" /&gt;
 ]]
 .column.bg-main2[.content[
 
@@ -50,7 +54,7 @@ class: split-two with-border
 
 - Página: https://beatrizmilz.github.io/
 
-- Github:&lt;a href="http://github.com/beatrizmilz"&gt;@beatrizmilz&lt;/a&gt; 
+- Github: &lt;a href="http://github.com/beatrizmilz"&gt;@beatrizmilz&lt;/a&gt; 
 
 - Twitter: &lt;a href="http://twitter.com/beatrizmilz"&gt;@BeaMilz&lt;/a&gt; 
 
@@ -63,7 +67,7 @@ class: split-two with-border
 # Instrutoras
 ## Haydee Svab
 
-&lt;img src="img/foto_haydee.JPG" width="100%" /&gt;
+&lt;img src="img/foto_haydee.JPG" width="100%" style="display: block; margin: auto;" /&gt;
 ]]
 .column.bg-main2[.content[
 
@@ -76,6 +80,17 @@ class: split-two with-border
 
 ]]
 
+---
+class: middle
+# Cronograma 
+
+1 - O que é o R-Ladies?
+
+2 - Introdução sobre a linguagem de marcação markdown e sobre arquivos do tipo RMarkdown.
+
+3 - Como criar uma apresentação utilizando o pacote Xaringan. 
+
+4 - Hospedagem da apresentação utilizando o Github Pages.
 
 ---
 
@@ -112,6 +127,8 @@ Fonte: [About us - R-Ladies](https://rladies.org/about-us/), [Meetup R-Ladies S�
 class:   center, middle
 ## Como o R-Ladies começou?
 &lt;img src="img/gabriela.jpeg" width="20%" style="display: block; margin: auto;" /&gt;
+
+
 **[Gabriela de Queiroz](https://github.com/gdequeiroz)** fundou o R-Ladies no dia **1 de outubro de 2012**. Ela queria retribuir à comunidade depois de ir a vários encontros e aprender muito de graça. O primeiro encontro R-Ladies foi realizado em ** San Francisco, Califórnia (Estados Unidos) **. Nos anos seguintes, mais capítulos do R-Ladies começaram em todo o mundo.
 
 Fonte: [About us - R-Ladies](https://rladies.org/about-us/history/)
@@ -140,13 +157,8 @@ O R-Ladies dedica-se a proporcionar uma experiência livre de assédio para todo
 
 Atualizado em: 13/04/2019. Fonte: [R-Ladies Shiny App](https://gqueiroz.shinyapps.io/rshinylady/) 
 
-
-```r
-DT::datatable(rladies_br, autoHideNavigation = TRUE)
-```
-
-<div id="htmlwidget-25c4467ea88e8ce34ae4" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-25c4467ea88e8ce34ae4">{"x":{"filter":"none","autoHideNavigation":true,"data":[["1","2","3","4","5","6","7","8","9","10"],["Florianópolis","Salvador","Niterói","Curitiba","Belo Horizonte","São Paulo","Porto Alegre","Natal","Americana","Rio de Janeiro"],["2019-04-07","2018-07-23","2018-06-04","2018-05-29","2018-04-20","2018-02-10","2017-10-30","2017-09-25","2017-06-24","2017-02-27"],[22,114,289,151,509,343,218,135,28,394]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>city<\/th>\n      <th>dt_created<\/th>\n      <th>members<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":3},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-0aa3c06154deac8fdc6c" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-0aa3c06154deac8fdc6c">{"x":{"filter":"none","autoHideNavigation":true,"data":[["1","2","3","4","5","6","7","8","9","10"],["Florianópolis","Salvador","Niterói","Curitiba","Belo Horizonte","São Paulo","Porto Alegre","Natal","Americana","Rio de Janeiro"],["2019-04-07","2018-07-23","2018-06-04","2018-05-29","2018-04-20","2018-02-10","2017-10-30","2017-09-25","2017-06-24","2017-02-27"],[22,114,289,151,509,343,218,135,28,394]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>city<\/th>\n      <th>dt_created<\/th>\n      <th>members<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":3},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
 
 ---
 class:  center, middle
@@ -167,6 +179,597 @@ R-Ladies LATAM Blog (Latin America) - Em breve!
 
 [R-Ladies - How do get involved](https://rladies.org/about-us/help/)
 
+---
+class: middle, center
+
+# Introdução sobre a linguagem de marcação markdown e arquivos do tipo RMarkdown.
+
+---
+class: middle
+## Por que apresentações são importantes? 
+
+
+&lt;img src="img/data-science.png" width="100%" style="display: block; margin: auto;" /&gt;
+
+Fonte: http://r4ds.had.co.nz/
+
+- Uma das formas de comunicar os resultados!
+
+
+- Hoje iremos praticar como criar uma apresentação utilizando o R e o pacote Xaringan. 
+
+---
+class: middle
+## Formas de criar apresentações no R:
+
+* Pacote xaringan - Utiliza RMarkdown
+
+* Outros: 
+
+      * output: **beamer_presentation** -&gt;  beamer (pdf)
+      
+      * output: **ioslides_presentation** -&gt; ioslides (HTML) 
+      
+      * output: **slidy_presentation** -&gt;  slidy (HTML)
+      
+      Obs: para separar entre um slide e outro, usar três *
+
+
+
+
+---
+class: middle
+
+## Rmarkdown
+* É um tipo de arquivo que suporta códigos em R, texto, markdown e outros formatos.
+
+* Apresenta os seus códigos, o resultado, e também os seus comentários.
+
+* Arquivos **.Rmd** são reprodutíveis.
+
+* São interessantes para trabalhar em equipe, para comunicar seus resultados, e para desenvolver seus códigos em R.
+
+* O markdown é uma linguagem de marcação simples. 
+
+* [Rmarkdown Cheatsheet](http://www.rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf)
+
+---
+class: middle
+
+## Rmarkdown
+* Possibilita exportar diferentes tipos de arquivos.
+
+&lt;img src="img/markdown.png" width="50%" style="display: block; margin: auto;" /&gt;
+
+---
+class: middle
+## Markdown
+
+* O Rmarkdown utiliza a linguagem de marcação Markdown.
+
+* O markdown é uma linguagem de marcação simples. 
+
+* [Rmarkdown Cheatsheet 2.0](http://www.rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf) e [Rmarkdown Cheatsheet](https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf).
+
+* Elaborada para ser fácil de ler, fácil de escrever.
+
+---
+## Markdown
+
+
+**Negrito**: `**bold**` 
+
+_Itálico_: `_italics_`
+
+
+**Adicionar títulos**
+
+`# Título 1`
+
+`## Título 2`
+
+`### Título 3` 
+
+# Título 1
+## Título 2
+### Título 3
+
+---
+class: middle
+## Fazendo uma lista
+Você pode fazer uma lista escrevendo com hífens ou asteriscos, como a seguir:
+
+`* negrito com asteriscos duplos`
+
+`* itálico com underline`
+
+`* fonte do tipo código com crase`
+
+ou dessa forma:
+
+`- negrito com asteriscos duplos`
+
+`- itálico com underline`
+
+`- fonte do tipo código com crase`
+
+Cada um vai aparecer como:
+
+- negrito com asteriscos duplos
+- itálico com underline
+- fonte do tipo código com crase
+
+Referência: [SW Carpentry](https://swcarpentry.github.io/r-novice-gapminder/15-knitr-markdown/index.html)
+
+
+---
+class: middle
+## Fazendo uma lista enumerada
+Você pode fazer uma lista numerada usando somente números. Você pode usar o mesmo número quantas vezes quiser: 
+
+`1. negrito com asteriscos duplos`
+
+`1. itálico com underline`
+
+`1. fonte do tipo código com crase`
+
+Isso irá aparecer como:
+
+1. negrito com asteriscos duplos
+1. itálico com underline
+1. fonte do tipo código com crase
+
+
+Referência: [SW Carpentry](https://swcarpentry.github.io/r-novice-gapminder/15-knitr-markdown/index.html)
+
+---
+class: middle
+## Mais de Markdown
+
+Você pode fazer um hiperlink dessa forma: `[**texto para mostrar**](http://the-web-page.com)`.
+
+Você pode incluir arquivo de imagem dessa forma: `![**título**](http://url/for/file)`
+
+Se você sabe como escrever equações em LaTeX, ficará feliz em saber que pode usar `$$` para inserir equações matemáticas, como: 
+
+
+```r
+# $$y = \mu + \sum_{i=1}^p \beta_i x_i + \epsilon$$
+```
+
+
+`$$y = \mu + \sum_{i=1}^p \beta_i x_i + \epsilon$$`
+
+Referência: [SW Carpentry](https://swcarpentry.github.io/r-novice-gapminder/15-knitr-markdown/index.html)
+
+---
+class: middle, center
+## Mais sobre Markdown:
+Consulte a [Cheatsheet](https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf)!
+
+
+---
+class: middle, center
+
+# Como criar uma apresentação utilizando o pacote Xaringan
+
+---
+class: middle
+## Introdução sobre o Xaringan
+
+- O xaringan é um pacote do R para criar apresentações usando o  [remark.js](http://remarkjs.com) através do Rmarkdown.
+
+&lt;img src="img/xaringan.PNG" width="30%" style="display: block; margin: auto;" /&gt;
+
+- Como pronuncia Xaringan? Veja a [resposta do autor do pacote](https://yihui.name/en/2019/01/rstudio-conf/) e  [Video](https://naruto.fandom.com/wiki/Sharingan?jwsource=cl) (1 minuto e 04 segundos)
+
+
+- Mais sobre o xaringan:
+
+    - [Apresentação da documentação](http://slides.yihui.name/xaringan/) 
+    - [Livro R Markdown (Capítulo 7)](https://bookdown.org/yihui/rmarkdown/xaringan.html)
+    - [Remark.js Wiki](https://github.com/gnab/remark/wiki)
+    - [Xaringan Wiki](https://github.com/yihui/xaringan/wiki)
+---
+class: middle
+## Criador do xaringan
+
+- O xaringan foi criado pelo [**Yihui Xie**](https://yihui.name/). Ele é desenvolvedor de software na RStudio.
+
+- Desenvolveu os seguintes pacotes: [knitr](https://yihui.name/knitr/), [animation](https://yihui.name/animation/), [bookdown](https://bookdown.org/), [blogdown](https://github.com/rstudio/blogdown), [pagedown](https://github.com/rstudio/blogdown), [xaringan](https://slides.yihui.name/xaringan/), e [tinytex](https://yihui.name/tinytex/). 
+
+&lt;img src="img/yihui.png" width="99" style="display: block; margin: auto;" /&gt;
+
+
+Thanks Yihui for this amazing package! 
+---
+class: middle
+
+## Pré-requisitos:
+- [R](https://www.r-project.org/)
+- [RStudio](https://www.rstudio.com/)
+- Pacote [Rmarkdown](https://rmarkdown.rstudio.com/) * O R instala esse pacote automaticamente quando necessário.
+- Pacote [Xaringan](https://github.com/yihui/xaringan) 
+- Pacote [knitr](http://yihui.name/knitr/)
+- Google Chrome ou Chromium. 
+
+
+---
+class: middle
+
+## Instalar o Xaringan
+- Existem duas formas de instalar:
+
+CRAN:
+
+```r
+install.packages("xaringan")
+```
+
+
+Github:
+
+```r
+devtools::install_github("yihui/xaringan")
+```
+
+
+---
+class: middle
+
+## Inicie o RSTUDIO:
+
+&lt;img src="img/0.PNG" width="100%" style="display: block; margin: auto;" /&gt;
+
+- Instale os pacotes:
+
+```r
+install.packages("rmarkdown")
+install.packages("knitr")
+devtools::install_github("yihui/xaringan")
+```
+
+---
+class:  middle
+
+## Crie um novo arquivo Rmarkdown:
+
+&lt;img src="img/1.PNG" width="100%" style="display: block; margin: auto;" /&gt;
+
+---
+class: middle
+
+## Selecione o template Ninja Presentation:
+&lt;img src="img/2.PNG" width="100%" style="display: block; margin: auto;" /&gt;
+
+
+* Dica: para facilitar posteriormente, crie a sua apresentação com o nome de `index.Rmd`.
+
+---
+class: middle
+
+## Será criado um RMarkdown com o Ninja Presentation:
+
+&lt;img src="img/3.PNG" width="100%" style="display: block; margin: auto;" /&gt;
+
+
+---
+class: middle
+
+## yaml - metadados do documento:
+
+- **y**et **a**nother **m**arkup **l**anguage 
+- Cuidado com a **identação**
+- Controla muitas das configurações do documento.
+
+&lt;img src="img/4.PNG" width="100%" style="display: block; margin: auto;" /&gt;
+
+- title: título
+- subtitle: subtítulo
+- author: autor
+- date: data
+- output: formato (Ex: html_document, pdf_document, etc). No caso do Xaringan, o output é **xaringan::moon_reader**  
+   - libs_dir: pasta onde colocará bibliotecas necessárias (ex. remark-latest.min.js)
+
+
+
+
+Leia também: [Output Formats - R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown/output-formats.html)
+
+---
+class: middle
+
+## Quais são os temas disponíveis?
+- Depende da versão do xaringan que está usando:
+
+
+```r
+names(xaringan:::list_css())
+```
+
+```
+##  [1] "chocolate-fonts"  "chocolate"        "default-fonts"   
+##  [4] "default"          "duke-blue"        "fc-fonts"        
+##  [7] "fc"               "hygge-duke"       "hygge"           
+## [10] "kunoichi"         "lucy-fonts"       "lucy"            
+## [13] "metropolis-fonts" "metropolis"       "middlebury-fonts"
+## [16] "middlebury"       "ninjutsu"         "rladies-fonts"   
+## [19] "rladies"          "robot-fonts"      "robot"           
+## [22] "rutgers-fonts"    "rutgers"          "shinobi"         
+## [25] "tamu-fonts"       "tamu"             "uo-fonts"        
+## [28] "uo"               "uol-fonts"        "uol"
+```
+
+Alguns exemplos de disponíveis: [xaringan themes](https://github.com/yihui/xaringan/wiki/Themes)
+---
+class: middle
+## Colocar o tema RLadies
+
+```r
+output:
+  xaringan::moon_reader:
+    css: ["rladies", "rladies-fonts"]
+```
+- Criado por/Made by: [Alison Presmanes Hill](https://alison.rbind.io/post/r-ladies-slides/)
+* Se você entende de CSS, é possível adaptar os temas e também criá-los :)
+
+
+---
+class: middle
+## Outro tema RLadies: Kunoichi
+- É esse tema que estou usando :)
+
+
+```r
+output:
+  xaringan::moon_reader:
+    css: [kunoichi, ninjutsu, rladies-fonts]
+```
+
+- Criado por/Made by: [Emi Tanaka](https://github.com/emitanaka/ninja-theme)
+---
+class:  middle
+
+## Exemplo do yaml:
+
+&lt;img src="img/5.PNG" width="100%" style="display: block; margin: auto;" /&gt;
+
+- Aperte o Knit e...
+---
+class:  middle
+
+## Resultado:
+&lt;img src="img/6.PNG" width="40%" style="display: block; margin: auto;" /&gt;&lt;img src="img/7.PNG" width="40%" style="display: block; margin: auto;" /&gt;
+
+
+- O knit exportará um arquivo do tipo html.
+
+- Agora o tema da apresentação está configurado!
+
+- Aperte H ou ? para conferir a lista de atalhos do xaringan. 
+---
+## DEU ERRO NO KNITR!
+
+Calma! É bem comum dar erro ao compliar o arquivo pois **qualquer** código errado causa isso. Algumas coisas pra se observar:
+
+- Yaml header - se algo estiver errado, vai dar erro ao compilar. Muito cuidado com a identação!
+
+- Código nos chunks - teste o Run All Chunks e ver se dá erro em algum específico. Se descobrir, tente verificar o que há de errado no código (pode ser a falta de um parênteses, vírgula, entre outros).
+
+&lt;img src="https://media.giphy.com/media/j9GASQ5ocrIRicnmyq/giphy.gif" width="30%" style="display: block; margin: auto;" /&gt;
+---
+
+
+
+---
+class: middle
+## Chuncks de Código R
+
+Markdown é interessante e útil, mas seu real poder vem da combinação de Markdown com chuncks de códigos em R. 
+Isso  é o Markdown. Quando processado, o código em R será executado; se ele produz figuras, as figuras serão inseridas ao final do documento.
+
+&lt;img src="img/chunk.png" style="display: block; margin: auto;" /&gt;
+
+- É uma boa ideia dar a cada chunck um nome, pois ele podem ajudar a corrigir erros, e, se quaisquer gráficos são produzidos, os nomes dos arquivos serão baseados no nome do chunck de código que os produzirem.
+
+
+Referência: [SW Carpentry](https://swcarpentry.github.io/r-novice-gapminder/15-knitr-markdown/index.html)
+---
+class: middle
+## Como criar um chunck de código?
+
+&lt;img src="img/8.PNG" width="1819" style="display: block; margin: auto;" /&gt;
+ 
+Dica: Atalho do teclado para criar chunks:  `Ctrl + ALt + I`.
+
+
+---
+class: middle
+## Como as coisas são compiladas?
+
+- Quando você pressiona o botão “Knit HTML”, o documento R Markdown é processado pelo knitr e um documento Markdown é produzido (como, também, um potencial conjunto de arquivos de figuras): o código em R é executado e substituído pelo input e output; se figuras são produzidas, links para essas figuras serão incluídos.
+
+- A seguir, os documentos Markdown e de figuras  são processados pela ferramenta pandoc, que converte o arquivo Markdown em um arquivo html, com as figuras anexadas.
+
+
+&lt;img src="img/rmd-15-rmd_to_html_fig-1.png" style="display: block; margin: auto;" /&gt;
+
+Referência: [SW Carpentry](https://swcarpentry.github.io/r-novice-gapminder/15-knitr-markdown/index.html)
+
+
+---
+class: middle
+## Opções de chunck
+
+Há uma variedade de opções que podem afetar como os chuncks de código são tratados.
+
+- Use `echo=FALSE` para evitar que o próprio código apareça.
+
+- Use `results="hide"` para evitar que qualquer resultado seja impresso.
+
+- Use `eval=FALSE` para mostrar o código, mas ele não é avaliado.
+
+- Use `warning=FALSE` e `message=FALSE` para ocultar qualquer messagens de avisos produzidas.
+
+- Use `out.width` para controlar o tamanho de figuras produzidas (Ex: `out.width = "100%"`).
+
+
+
+Assim, você pode escrever:
+
+&lt;img src="img/chunk_load_libraries.png" style="display: block; margin: auto;" /&gt;
+ 
+Referência: [SW Carpentry](https://swcarpentry.github.io/r-novice-gapminder/15-knitr-markdown/index.html)
+ 
+---
+class: middle
+## Opções globais de chunck
+Muitas vezes, haverá algumas opções que você irá querer repetir seu uso; para isso, você pode configurar as opções globais de chunck, como:  
+
+
+&lt;img src="img/chunk_global_options.png" style="display: block; margin: auto;" /&gt;
+
+A opção `fig.path` define onde as figuras serão salvas. A `/` é importante, pois sem ela, as figuras seriam salvas no local padrão, mas só com nomes que começam com Figs. 
+
+
+
+Referência: [SW Carpentry](https://swcarpentry.github.io/r-novice-gapminder/15-knitr-markdown/index.html)
+
+---
+class: middle
+## Código R no texto
+Você pode fazer com que todo número em seu relatório seja reproduzível. 
+
+
+```r
+#Use `r e ` para um in-line code chunk . 
+#O código será executado e
+#substituído com o valor do resultado.
+```
+
+
+
+
+```r
+`r code`
+
+Ex:
+
+`r round(3.14159265359, 2)`
+```
+
+3.14
+
+Não deixe que esse chunck in-line seja separado através das linhas.
+
+ 
+
+Referência: [SW Carpentry](https://swcarpentry.github.io/r-novice-gapminder/15-knitr-markdown/index.html)
+---
+class: middle
+## Código em R no texto
+Outro exemplo:
+
+```r
+# O dataframe mtcars possui `r nrow(mtcars)` carros. 
+```
+
+Exemplo: O dataframe mtcars possui 32 carros.
+
+---
+class: middle
+## Exemplo: adicionando um gráfico
+
+```r
+attach(mtcars)
+plot(wt, mpg, main="Exemplo de Gráfico de Dispersão",
+xlab="Peso do Carro ", ylab="Milhas Por Galão ", pch=19)
+```
+
+&lt;img src="index_files/figure-html/unnamed-chunk-34-1.png" style="display: block; margin: auto;" /&gt;
+---
+class: middle
+## Exemplo: adicionando uma tabela simples
+
+
+```r
+head(mtcars)
+```
+
+```
+##                    mpg cyl disp  hp drat    wt  qsec vs am gear carb
+## Mazda RX4         21.0   6  160 110 3.90 2.620 16.46  0  1    4    4
+## Mazda RX4 Wag     21.0   6  160 110 3.90 2.875 17.02  0  1    4    4
+## Datsun 710        22.8   4  108  93 3.85 2.320 18.61  1  1    4    1
+## Hornet 4 Drive    21.4   6  258 110 3.08 3.215 19.44  1  0    3    1
+## Hornet Sportabout 18.7   8  360 175 3.15 3.440 17.02  0  0    3    2
+## Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1
+```
+---
+class: middle
+## Exemplo: adicionando uma tabela
+
+```r
+DT::datatable(head(mtcars, 10),
+  fillContainer = TRUE, options = list(pageLength = 5))
+```
+
+<div id="htmlwidget-62a7c28e910d172553b3" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-62a7c28e910d172553b3">{"x":{"filter":"none","fillContainer":true,"data":[["Mazda RX4","Mazda RX4 Wag","Datsun 710","Hornet 4 Drive","Hornet Sportabout","Valiant","Duster 360","Merc 240D","Merc 230","Merc 280"],[21,21,22.8,21.4,18.7,18.1,14.3,24.4,22.8,19.2],[6,6,4,6,8,6,8,4,4,6],[160,160,108,258,360,225,360,146.7,140.8,167.6],[110,110,93,110,175,105,245,62,95,123],[3.9,3.9,3.85,3.08,3.15,2.76,3.21,3.69,3.92,3.92],[2.62,2.875,2.32,3.215,3.44,3.46,3.57,3.19,3.15,3.44],[16.46,17.02,18.61,19.44,17.02,20.22,15.84,20,22.9,18.3],[0,0,1,1,0,1,0,1,1,1],[1,1,1,0,0,0,0,0,0,0],[4,4,4,3,3,3,3,4,4,4],[4,4,1,1,2,1,4,2,2,4]],"container":"<table class=\"display fill-container\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>mpg<\/th>\n      <th>cyl<\/th>\n      <th>disp<\/th>\n      <th>hp<\/th>\n      <th>drat<\/th>\n      <th>wt<\/th>\n      <th>qsec<\/th>\n      <th>vs<\/th>\n      <th>am<\/th>\n      <th>gear<\/th>\n      <th>carb<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":5,"columnDefs":[{"className":"dt-right","targets":[1,2,3,4,5,6,7,8,9,10,11]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false,"lengthMenu":[5,10,25,50,100]}},"evals":[],"jsHooks":[]}</script>
+---
+class: middle
+## Adicionando imagens usando o Knitr
+
+Função: `knitr::include_graphics()`
+
+Exemplo:
+
+```r
+knitr::include_graphics("https://www.r-project.org/Rlogo.png")
+```
+
+&lt;img src="https://www.r-project.org/Rlogo.png" width="50%" style="display: block; margin: auto;" /&gt;
+---
+class: middle
+## Adicionando imagens usando Knitr: opções de Chunk 
+
+- `out.width = "50%"` - tamanho da imagem
+
+
+&lt;img src="https://www.r-project.org/Rlogo.png" width="50%" style="display: block; margin: auto;" /&gt;
+
+[Opções do KnitR](https://yihui.name/knitr/options/#chunk-options)
+
+---
+class: middle
+## Adicionando imagens usando Knitr: opções de Chunk 
+
+- **Alinhamento da figura**
+- `fig.align = 'center', 'default', **'left'**,'right'` 
+
+&lt;img src="https://www.r-project.org/Rlogo.png" width="20%" style="display: block; margin: auto auto auto 0;" /&gt;
+
+- `fig.align = 'center', 'default', 'left', **'right' **`
+
+&lt;img src="https://www.r-project.org/Rlogo.png" width="20%" style="display: block; margin: auto 0 auto auto;" /&gt;
+---
+class: middle
+## Adicionando imagens usando Knitr: opções de Chunk 
+
+- Legenda de figura 
+
+- `fig.cap="Logo R"`
+
+
+&lt;div class="figure" style="text-align: center"&gt;
+&lt;img src="https://www.r-project.org/Rlogo.png" alt="R Logo" width="50%" /&gt;
+&lt;p class="caption"&gt;R Logo&lt;/p&gt;
+&lt;/div&gt;
+
+
+
+
+
 
 
 
@@ -180,14 +783,38 @@ https://pagedown.rbind.io/poster-relaxed
 
 
 
-
-
-
-
+https://yihui.name/en/2019/02/ultimate-inf-mr/
 
 ---
+## Preview da apresentação 
 
-class:  inverse, middle
+
+```r
+xaringan::inf_mr("index.Rmd")
+```
+
+- Comigo nem sempre funciona :( )
+---
+## Salvar a versão em PDF
+
+- O autor do pacote disse que a forma mais confiável é abrir no Google Chrome ou Chromium, e salvar como PDF.  Porém, existe essa função do pacote `pagedown`, que é recente e ainda será melhorada (pode não funcionar muito bem).
+
+
+```r
+remotes::install_github('rstudio/pagedown')
+```
+
+
+
+```r
+pagedown::chrome_print("index.html")
+```
+
+
+Referência: [Apresentação do Yihui na RStudio Conf 2019: pagedown - Creating beautiful PDFs with R Markdown and CSS](https://resources.rstudio.com/rstudio-conf-2019/pagedown-creating-beautiful-pdfs-with-r-markdown-and-css)
+---
+
+class:  middle
 
 # Obrigada!
 Apresentação elaborada com [Xaringan](https://github.com/yihui/xaringan) e [Kunoichi](https://github.com/emitanaka/ninja-theme).

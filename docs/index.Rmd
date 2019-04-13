@@ -7,13 +7,19 @@ encoding: "UTF-8"
 output:
   xaringan::moon_reader:
     chakra: libs/remark-latest.min.js
-    css: [kunoichi, ninjutsu,rladies-fonts]
+    css: [kunoichi, ninjutsu, rladies-fonts]
     lib_dir: libs
     nature:
       highlightStyle: github
       highlightLines: true
       countIncrementalSlides: false
 ---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, fig.align = "center")
+```
+
+
 class: split-two with-border
 .column.bg-main1[.content[
 # Instrutoras
@@ -38,7 +44,7 @@ knitr::include_graphics("img/foto_bia.jpg")
 
 - Página: https://beatrizmilz.github.io/
 
-- Github:<a href="http://github.com/beatrizmilz">@beatrizmilz</a> 
+- Github: <a href="http://github.com/beatrizmilz">@beatrizmilz</a> 
 
 - Twitter: <a href="http://twitter.com/beatrizmilz">@BeaMilz</a> 
 
@@ -66,11 +72,20 @@ knitr::include_graphics("img/foto_haydee.JPG")
 
 ]]
 
+---
+class: middle
+# Cronograma 
+
+1 - O que é o R-Ladies?
+
+2 - Introdução sobre a linguagem de marcação markdown e sobre arquivos do tipo RMarkdown.
+
+3 - Como criar uma apresentação utilizando o pacote Xaringan. 
+
+4 - Hospedagem da apresentação utilizando o Github Pages.
 
 ---
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE, fig.align = "center")
-```
+
 
 class:  center, middle
 # O que é o R-Ladies?
@@ -106,6 +121,8 @@ class:   center, middle
 ```{r echo=FALSE, fig.align='center', out.width="20%"}
 knitr::include_graphics("img/gabriela.jpeg")
 ```
+
+
 **[Gabriela de Queiroz](https://github.com/gdequeiroz)** fundou o R-Ladies no dia **1 de outubro de 2012**. Ela queria retribuir à comunidade depois de ir a vários encontros e aprender muito de graça. O primeiro encontro R-Ladies foi realizado em ** San Francisco, Califórnia (Estados Unidos) **. Nos anos seguintes, mais capítulos do R-Ladies começaram em todo o mundo.
 
 Fonte: [About us - R-Ladies](https://rladies.org/about-us/history/)
@@ -147,7 +164,7 @@ members = c(22, 114, 289, 151, 509,
 ```
 Atualizado em: 13/04/2019. Fonte: [R-Ladies Shiny App](https://gqueiroz.shinyapps.io/rshinylady/) 
 
-```{r}
+```{r echo=FALSE}
 DT::datatable(rladies_br, autoHideNavigation = TRUE)
 ```
 
@@ -170,6 +187,594 @@ R-Ladies LATAM Blog (Latin America) - Em breve!
 
 [R-Ladies - How do get involved](https://rladies.org/about-us/help/)
 
+---
+class: middle, center
+
+# Introdução sobre a linguagem de marcação markdown e arquivos do tipo RMarkdown.
+
+---
+class: middle
+## Por que apresentações são importantes? 
+
+
+```{r echo=FALSE, out.width="100%"}
+knitr::include_graphics("img/data-science.png")
+```
+
+Fonte: http://r4ds.had.co.nz/
+
+- Uma das formas de comunicar os resultados!
+
+
+- Hoje iremos praticar como criar uma apresentação utilizando o R e o pacote Xaringan. 
+
+---
+class: middle
+## Formas de criar apresentações no R:
+
+* Pacote xaringan - Utiliza RMarkdown
+
+* Outros: 
+
+      * output: **beamer_presentation** ->  beamer (pdf)
+      
+      * output: **ioslides_presentation** -> ioslides (HTML) 
+      
+      * output: **slidy_presentation** ->  slidy (HTML)
+      
+      Obs: para separar entre um slide e outro, usar três *
+
+
+
+
+---
+class: middle
+
+## Rmarkdown
+* É um tipo de arquivo que suporta códigos em R, texto, markdown e outros formatos.
+
+* Apresenta os seus códigos, o resultado, e também os seus comentários.
+
+* Arquivos **.Rmd** são reprodutíveis.
+
+* São interessantes para trabalhar em equipe, para comunicar seus resultados, e para desenvolver seus códigos em R.
+
+* O markdown é uma linguagem de marcação simples. 
+
+* [Rmarkdown Cheatsheet](http://www.rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf)
+
+---
+class: middle
+
+## Rmarkdown
+* Possibilita exportar diferentes tipos de arquivos.
+
+```{r echo=FALSE, fig.align='center', out.width="50%"}
+knitr::include_graphics("img/markdown.png")
+```
+
+---
+class: middle
+## Markdown
+
+* O Rmarkdown utiliza a linguagem de marcação Markdown.
+
+* O markdown é uma linguagem de marcação simples. 
+
+* [Rmarkdown Cheatsheet 2.0](http://www.rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf) e [Rmarkdown Cheatsheet](https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf).
+
+* Elaborada para ser fácil de ler, fácil de escrever.
+
+---
+## Markdown
+
+
+**Negrito**: `**bold**` 
+
+_Itálico_: `_italics_`
+
+
+**Adicionar títulos**
+
+`# Título 1`
+
+`## Título 2`
+
+`### Título 3` 
+
+# Título 1
+## Título 2
+### Título 3
+
+---
+class: middle
+## Fazendo uma lista
+Você pode fazer uma lista escrevendo com hífens ou asteriscos, como a seguir:
+
+`* negrito com asteriscos duplos`
+
+`* itálico com underline`
+
+`* fonte do tipo código com crase`
+
+ou dessa forma:
+
+`- negrito com asteriscos duplos`
+
+`- itálico com underline`
+
+`- fonte do tipo código com crase`
+
+Cada um vai aparecer como:
+
+- negrito com asteriscos duplos
+- itálico com underline
+- fonte do tipo código com crase
+
+Referência: [SW Carpentry](https://swcarpentry.github.io/r-novice-gapminder/15-knitr-markdown/index.html)
+
+
+---
+class: middle
+## Fazendo uma lista enumerada
+Você pode fazer uma lista numerada usando somente números. Você pode usar o mesmo número quantas vezes quiser: 
+
+`1. negrito com asteriscos duplos`
+
+`1. itálico com underline`
+
+`1. fonte do tipo código com crase`
+
+Isso irá aparecer como:
+
+1. negrito com asteriscos duplos
+1. itálico com underline
+1. fonte do tipo código com crase
+
+
+Referência: [SW Carpentry](https://swcarpentry.github.io/r-novice-gapminder/15-knitr-markdown/index.html)
+
+---
+class: middle
+## Mais de Markdown
+
+Você pode fazer um hiperlink dessa forma: `[**texto para mostrar**](http://the-web-page.com)`.
+
+Você pode incluir arquivo de imagem dessa forma: `![**título**](http://url/for/file)`
+
+Se você sabe como escrever equações em LaTeX, ficará feliz em saber que pode usar `$$` para inserir equações matemáticas, como: 
+
+```{r}
+# $$y = \mu + \sum_{i=1}^p \beta_i x_i + \epsilon$$
+```
+
+
+$$y = \mu + \sum_{i=1}^p \beta_i x_i + \epsilon$$
+
+Referência: [SW Carpentry](https://swcarpentry.github.io/r-novice-gapminder/15-knitr-markdown/index.html)
+
+---
+class: middle, center
+## Mais sobre Markdown:
+Consulte a [Cheatsheet](https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf)!
+
+
+---
+class: middle, center
+
+# Como criar uma apresentação utilizando o pacote Xaringan
+
+---
+class: middle
+## Introdução sobre o Xaringan
+
+- O xaringan é um pacote do R para criar apresentações usando o  [remark.js](http://remarkjs.com) através do Rmarkdown.
+
+```{r echo=FALSE, out.width="30%"}
+knitr::include_graphics("img/xaringan.PNG")
+```
+
+- Como pronuncia Xaringan? Veja a [resposta do autor do pacote](https://yihui.name/en/2019/01/rstudio-conf/) e  [Video](https://naruto.fandom.com/wiki/Sharingan?jwsource=cl) (1 minuto e 04 segundos)
+
+
+- Mais sobre o xaringan:
+
+    - [Apresentação da documentação](http://slides.yihui.name/xaringan/) 
+    - [Livro R Markdown (Capítulo 7)](https://bookdown.org/yihui/rmarkdown/xaringan.html)
+    - [Remark.js Wiki](https://github.com/gnab/remark/wiki)
+    - [Xaringan Wiki](https://github.com/yihui/xaringan/wiki)
+---
+class: middle
+## Criador do xaringan
+
+- O xaringan foi criado pelo [**Yihui Xie**](https://yihui.name/). Ele é desenvolvedor de software na RStudio.
+
+- Desenvolveu os seguintes pacotes: [knitr](https://yihui.name/knitr/), [animation](https://yihui.name/animation/), [bookdown](https://bookdown.org/), [blogdown](https://github.com/rstudio/blogdown), [pagedown](https://github.com/rstudio/blogdown), [xaringan](https://slides.yihui.name/xaringan/), e [tinytex](https://yihui.name/tinytex/). 
+
+```{r echo=FALSE}
+knitr::include_graphics("img/yihui.png")
+```
+
+
+Thanks Yihui for this amazing package! 
+---
+class: middle
+
+## Pré-requisitos:
+- [R](https://www.r-project.org/)
+- [RStudio](https://www.rstudio.com/)
+- Pacote [Rmarkdown](https://rmarkdown.rstudio.com/) * O R instala esse pacote automaticamente quando necessário.
+- Pacote [Xaringan](https://github.com/yihui/xaringan) 
+- Pacote [knitr](http://yihui.name/knitr/)
+- Google Chrome ou Chromium. 
+
+
+---
+class: middle
+
+## Instalar o Xaringan
+- Existem duas formas de instalar:
+
+CRAN:
+```{r eval=FALSE, include=TRUE}
+install.packages("xaringan")
+```
+
+
+Github:
+```{r eval=FALSE, include=TRUE}
+devtools::install_github("yihui/xaringan")
+```
+
+
+---
+class: middle
+
+## Inicie o RSTUDIO:
+
+```{r echo=FALSE, out.width="100%"}
+knitr::include_graphics("img/0.PNG")
+```
+
+- Instale os pacotes:
+```{r eval=FALSE, include=TRUE}
+install.packages("rmarkdown")
+install.packages("knitr")
+devtools::install_github("yihui/xaringan")
+```
+
+---
+class:  middle
+
+## Crie um novo arquivo Rmarkdown:
+
+```{r echo=FALSE, out.width="100%"}
+knitr::include_graphics("img/1.PNG")
+```
+
+---
+class: middle
+
+## Selecione o template Ninja Presentation:
+```{r echo=FALSE, out.width="100%"}
+knitr::include_graphics("img/2.PNG")
+```
+
+
+* Dica: para facilitar posteriormente, crie a sua apresentação com o nome de `index.Rmd`.
+
+---
+class: middle
+
+## Será criado um RMarkdown com o Ninja Presentation:
+
+```{r echo=FALSE, out.width="100%"}
+knitr::include_graphics("img/3.PNG")
+```
+
+
+---
+class: middle
+
+## yaml - metadados do documento:
+
+- **y**et **a**nother **m**arkup **l**anguage 
+- Cuidado com a **identação**
+- Controla muitas das configurações do documento.
+
+```{r echo=FALSE, out.width="100%"}
+knitr::include_graphics("img/4.PNG")
+```
+
+- title: título
+- subtitle: subtítulo
+- author: autor
+- date: data
+- output: formato (Ex: html_document, pdf_document, etc). No caso do Xaringan, o output é **xaringan::moon_reader**  
+   - libs_dir: pasta onde colocará bibliotecas necessárias (ex. remark-latest.min.js)
+
+
+
+
+Leia também: [Output Formats - R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown/output-formats.html)
+
+---
+class: middle
+
+## Quais são os temas disponíveis?
+- Depende da versão do xaringan que está usando:
+
+```{r}
+names(xaringan:::list_css())
+```
+
+Alguns exemplos de disponíveis: [xaringan themes](https://github.com/yihui/xaringan/wiki/Themes)
+---
+class: middle
+## Colocar o tema RLadies
+```{r  eval=FALSE, include=TRUE}
+output:
+  xaringan::moon_reader:
+    css: ["rladies", "rladies-fonts"]
+```
+- Criado por/Made by: [Alison Presmanes Hill](https://alison.rbind.io/post/r-ladies-slides/)
+* Se você entende de CSS, é possível adaptar os temas e também criá-los :)
+
+
+---
+class: middle
+## Outro tema RLadies: Kunoichi
+- É esse tema que estou usando :)
+
+```{r  eval=FALSE, include=TRUE}
+output:
+  xaringan::moon_reader:
+    css: [kunoichi, ninjutsu, rladies-fonts]
+```
+
+- Criado por/Made by: [Emi Tanaka](https://github.com/emitanaka/ninja-theme)
+---
+class:  middle
+
+## Exemplo do yaml:
+
+```{r echo=FALSE, out.width="100%"}
+knitr::include_graphics("img/5.PNG")
+```
+
+- Aperte o Knit e...
+---
+class:  middle
+
+## Resultado:
+```{r echo=FALSE, out.width="40%"}
+knitr::include_graphics("img/6.PNG")
+knitr::include_graphics("img/7.PNG")
+```
+
+
+- O knit exportará um arquivo do tipo html.
+
+- Agora o tema da apresentação está configurado!
+
+- Aperte H ou ? para conferir a lista de atalhos do xaringan. 
+---
+## DEU ERRO NO KNITR!
+
+Calma! É bem comum dar erro ao compliar o arquivo pois **qualquer** código errado causa isso. Algumas coisas pra se observar:
+
+- Yaml header - se algo estiver errado, vai dar erro ao compilar. Muito cuidado com a identação!
+
+- Código nos chunks - teste o Run All Chunks e ver se dá erro em algum específico. Se descobrir, tente verificar o que há de errado no código (pode ser a falta de um parênteses, vírgula, entre outros).
+
+```{r echo=FALSE, out.width="30%"}
+knitr::include_graphics("https://media.giphy.com/media/j9GASQ5ocrIRicnmyq/giphy.gif")
+```
+---
+
+
+
+---
+class: middle
+## Chuncks de Código R
+
+Markdown é interessante e útil, mas seu real poder vem da combinação de Markdown com chuncks de códigos em R. 
+Isso  é o Markdown. Quando processado, o código em R será executado; se ele produz figuras, as figuras serão inseridas ao final do documento.
+
+```{r echo=FALSE, fig.align='center'}
+knitr::include_graphics("img/chunk.png")
+```
+
+- É uma boa ideia dar a cada chunck um nome, pois ele podem ajudar a corrigir erros, e, se quaisquer gráficos são produzidos, os nomes dos arquivos serão baseados no nome do chunck de código que os produzirem.
+
+
+Referência: [SW Carpentry](https://swcarpentry.github.io/r-novice-gapminder/15-knitr-markdown/index.html)
+---
+class: middle
+## Como criar um chunck de código?
+
+```{r echo=FALSE, fig.align='center'}
+knitr::include_graphics("img/8.PNG")
+```
+ 
+Dica: Atalho do teclado para criar chunks:  `Ctrl + ALt + I`.
+
+
+---
+class: middle
+## Como as coisas são compiladas?
+
+- Quando você pressiona o botão “Knit HTML”, o documento R Markdown é processado pelo knitr e um documento Markdown é produzido (como, também, um potencial conjunto de arquivos de figuras): o código em R é executado e substituído pelo input e output; se figuras são produzidas, links para essas figuras serão incluídos.
+
+- A seguir, os documentos Markdown e de figuras  são processados pela ferramenta pandoc, que converte o arquivo Markdown em um arquivo html, com as figuras anexadas.
+
+
+```{r echo=FALSE, fig.align='center'}
+knitr::include_graphics("img/rmd-15-rmd_to_html_fig-1.png")
+```
+
+Referência: [SW Carpentry](https://swcarpentry.github.io/r-novice-gapminder/15-knitr-markdown/index.html)
+
+
+---
+class: middle
+## Opções de chunck
+
+Há uma variedade de opções que podem afetar como os chuncks de código são tratados.
+
+- Use `echo=FALSE` para evitar que o próprio código apareça.
+
+- Use `results="hide"` para evitar que qualquer resultado seja impresso.
+
+- Use `eval=FALSE` para mostrar o código, mas ele não é avaliado.
+
+- Use `warning=FALSE` e `message=FALSE` para ocultar qualquer messagens de avisos produzidas.
+
+- Use `out.width` para controlar o tamanho de figuras produzidas (Ex: `out.width = "100%"`).
+
+
+
+Assim, você pode escrever:
+
+```{r echo=FALSE, fig.align='center'}
+knitr::include_graphics("img/chunk_load_libraries.png")
+```
+ 
+Referência: [SW Carpentry](https://swcarpentry.github.io/r-novice-gapminder/15-knitr-markdown/index.html)
+ 
+---
+class: middle
+## Opções globais de chunck
+Muitas vezes, haverá algumas opções que você irá querer repetir seu uso; para isso, você pode configurar as opções globais de chunck, como:  
+
+
+```{r echo=FALSE, fig.align='center'}
+knitr::include_graphics("img/chunk_global_options.png")
+```
+
+A opção `fig.path` define onde as figuras serão salvas. A `/` é importante, pois sem ela, as figuras seriam salvas no local padrão, mas só com nomes que começam com Figs. 
+
+
+
+Referência: [SW Carpentry](https://swcarpentry.github.io/r-novice-gapminder/15-knitr-markdown/index.html)
+
+---
+class: middle
+## Código R no texto
+Você pode fazer com que todo número em seu relatório seja reproduzível. 
+
+```{r}
+#Use `r e ` para um in-line code chunk . 
+#O código será executado e
+#substituído com o valor do resultado.
+
+```
+
+
+
+```{r eval=FALSE, include=TRUE}
+`r code`
+
+Ex:
+
+`r round(3.14159265359, 2)`
+```
+
+`r round(3.14159265359, 2)`
+
+Não deixe que esse chunck in-line seja separado através das linhas.
+
+ 
+
+Referência: [SW Carpentry](https://swcarpentry.github.io/r-novice-gapminder/15-knitr-markdown/index.html)
+---
+class: middle
+## Código em R no texto
+Outro exemplo:
+```{r eval=FALSE, include=TRUE}
+# O dataframe mtcars possui `r nrow(mtcars)` carros. 
+```
+
+Exemplo: O dataframe mtcars possui `r nrow(mtcars)` carros.
+
+---
+class: middle
+## Exemplo: adicionando um gráfico
+```{r}
+attach(mtcars)
+plot(wt, mpg, main="Exemplo de Gráfico de Dispersão",
+xlab="Peso do Carro ", ylab="Milhas Por Galão ", pch=19)
+```
+---
+class: middle
+## Exemplo: adicionando uma tabela simples
+
+```{r }
+head(mtcars)
+```
+---
+class: middle
+## Exemplo: adicionando uma tabela
+```{r}
+DT::datatable(head(mtcars, 10),
+  fillContainer = TRUE, options = list(pageLength = 5))
+```
+---
+class: middle
+## Adicionando imagens usando o Knitr
+
+Função: `knitr::include_graphics()`
+
+Exemplo:
+```{r  out.width = "50%"}
+knitr::include_graphics("https://www.r-project.org/Rlogo.png")
+```
+---
+class: middle
+## Adicionando imagens usando Knitr: opções de Chunk 
+
+- `out.width = "50%"` - tamanho da imagem
+
+
+```{r echo=FALSE, out.width = "50%"}
+knitr::include_graphics("https://www.r-project.org/Rlogo.png")
+```
+
+[Opções do KnitR](https://yihui.name/knitr/options/#chunk-options)
+
+---
+class: middle
+## Adicionando imagens usando Knitr: opções de Chunk 
+
+- **Alinhamento da figura**
+- `fig.align = 'center', 'default', **'left'**,'right'` 
+
+```{r echo=FALSE,  out.width="20%", fig.align='left'} 
+knitr::include_graphics("https://www.r-project.org/Rlogo.png")
+```
+
+- `fig.align = 'center', 'default', 'left', **'right' **`
+
+```{r echo=FALSE,  out.width="20%", fig.align='right'}
+knitr::include_graphics("https://www.r-project.org/Rlogo.png")
+```
+---
+class: middle
+## Adicionando imagens usando Knitr: opções de Chunk 
+
+- Legenda de figura 
+
+- `fig.cap="Logo R"`
+
+
+```{r echo=FALSE,  out.width="50%", fig.cap="R Logo", fig.align='center'}
+knitr::include_graphics("https://www.r-project.org/Rlogo.png")
+```
+
+
+
+
+
 
 
 
@@ -183,14 +788,35 @@ https://pagedown.rbind.io/poster-relaxed
 
 
 
-
-
-
-
+https://yihui.name/en/2019/02/ultimate-inf-mr/
 
 ---
+## Preview da apresentação 
 
-class:  inverse, middle
+```{r eval=FALSE}
+xaringan::inf_mr("index.Rmd")
+```
+
+- Comigo nem sempre funciona :( )
+---
+## Salvar a versão em PDF
+
+- O autor do pacote disse que a forma mais confiável é abrir no Google Chrome ou Chromium, e salvar como PDF.  Porém, existe essa função do pacote `pagedown`, que é recente e ainda será melhorada (pode não funcionar muito bem).
+
+```{r eval=FALSE, include=TRUE}
+remotes::install_github('rstudio/pagedown')
+```
+
+
+```{r eval=FALSE}
+pagedown::chrome_print("index.html")
+```
+
+
+Referência: [Apresentação do Yihui na RStudio Conf 2019: pagedown - Creating beautiful PDFs with R Markdown and CSS](https://resources.rstudio.com/rstudio-conf-2019/pagedown-creating-beautiful-pdfs-with-r-markdown-and-css)
+---
+
+class:  middle
 
 # Obrigada!
 Apresentação elaborada com [Xaringan](https://github.com/yihui/xaringan) e [Kunoichi](https://github.com/emitanaka/ninja-theme).
