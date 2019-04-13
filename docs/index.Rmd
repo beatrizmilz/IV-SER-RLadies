@@ -7,7 +7,7 @@ encoding: "UTF-8"
 output:
   xaringan::moon_reader:
     chakra: libs/remark-latest.min.js
-    css: [default, rladies, robot-fonts]
+    css: [kunoichi, ninjutsu,rladies-fonts]
     lib_dir: libs
     nature:
       highlightStyle: github
@@ -19,7 +19,132 @@ output:
 knitr::opts_chunk$set(echo = TRUE, fig.align = "center")
 ```
 
+class:  center, middle
+# O que é o R-Ladies?
+
+R-Ladies é uma organização mundial que promove a diversidade de gênero na comunidade da linguagem R.
+R-Ladies São Paulo integra, orgulhosamente, a organização R-Ladies Global, em São Paulo.
+
+## Como?
+
+Através de meetups e mentorias em um ambiente seguro e amigável.
+
+Nosso principal objetivo é promover a linguagem computacional estatística R compartilhando conhecimento, assim, quem tiver interesse na linguagem será bem-vinda, independente do nível de conhecimento. 
+
+
+Fonte: [About us - R-Ladies](https://rladies.org/about-us/), [Meetup R-Ladies São Paulo](https://www.meetup.com/R-Ladies-Sao-Paulo/)
+
+---
+class:   center, middle
+## Para quem?
+Nosso principal público-alvo são as pessoas que se identificam com o gênero feminino, portanto, mulheres cis, mulheres trans, bem como pessoas não-binárias e queer.
+
+## Missão
+
+Como uma iniciativa de diversidade, a missão das R-Ladies é alcançar uma representação proporcional de pessoas de gêneros atualmente sub-representados na comunidade R, incentivando, inspirando e caacitando-as.
+
+
+
+Fonte: [About us - R-Ladies](https://rladies.org/about-us/), [Meetup R-Ladies São Paulo](https://www.meetup.com/R-Ladies-Sao-Paulo/)
+
+---
+class:   center, middle
+## Como o R-Ladies começou?
+```{r echo=FALSE, fig.align='center', out.width="20%"}
+knitr::include_graphics("img/gabriela.jpeg")
+```
+**[Gabriela de Queiroz](https://github.com/gdequeiroz)** fundou o R-Ladies no dia **1 de outubro de 2012**. Ela queria retribuir à comunidade depois de ir a vários encontros e aprender muito de graça. O primeiro encontro R-Ladies foi realizado em ** San Francisco, Califórnia (Estados Unidos) **. Nos anos seguintes, mais capítulos do R-Ladies começaram em todo o mundo.
+
+Fonte: [About us - R-Ladies](https://rladies.org/about-us/history/)
+
+
+---
+class:center, middle
+
+```{r echo=FALSE, out.width="100%"}
+knitr::include_graphics("img/shiny2.png")
+```
+
+
+Fonte: [R-Ladies Shiny App](https://gqueiroz.shinyapps.io/rshinylady/)  (13/04/2019)
+---
+class:   center, middle
+## Código de conduta
+
+
+O R-Ladies dedica-se a proporcionar uma experiência livre de assédio para todos. Não toleramos nenhuma forma de assédio aos participantes.
+
+
+[Código de conduta - R-Ladies](https://github.com/rladies/starter-kit/wiki/Code-of-Conduct#portuguese)
+
+
+---
+## R-Ladies no Brasil:
+```{r include=FALSE}
+rladies_br <- data.frame(
+city = c("Florianópolis", "Salvador", "Niterói", "Curitiba", "Belo Horizonte",
+         "São Paulo",	"Porto Alegre", "Natal",	"Americana",	"Rio de Janeiro"),
+dt_created = c("2019-04-07", "2018-07-23", "2018-06-04", "2018-05-29", "2018-04-20",
+               "2018-02-10", "2017-10-30", "2017-09-25", "2017-06-24", "2017-02-27"
+               ),
+members = c(22, 114, 289, 151, 509,
+            343, 218, 135, 28, 394)
+)
+
+```
+Atualizado em: 13/04/2019
+
+```{r}
+DT::datatable(rladies_br)
+```
+
+---
+class:  center, middle
+## Como saber mais?
+
+[Meetup](https://www.meetup.com/pt-BR/R-Ladies-Sao-Paulo)
+
+Twitter: [@RLadiesGlobal](https://twitter.com/rladiesglobal), [@RLadiesSaoPaulo](https://twitter.com/RLadiesSaoPaulo)
+
+Instagram: [@RLadiesSaoPaulo](http://instagram.com/RLadiesSaoPaulo)
+
+Facebook: [@RLadiesSaoPaulo](http://facebook.com/RLadiesSaoPaulo)
+
+Website: [https://rladies.org/](https://rladies.org/)
+
+R-Ladies LATAM Blog (Latin America) - Em breve!
+
+
+[R-Ladies - How do get involved](https://rladies.org/about-us/help/)
+
+
+
+
+
+---
+# Outros: Adicionar depois
 xaringan::summon_remark()
 https://remarkjs.com/downloads/remark-latest.min.js
 
+https://pagedown.rbind.io/poster-relaxed
 
+
+
+
+
+
+
+
+---
+
+class:  inverse, middle
+
+# Obrigada!
+Apresentação elaborada com [Xaringan](https://github.com/yihui/xaringan) e [Kunoichi](https://github.com/emitanaka/ninja-theme).
+
+Agradecimentos especiais:
+
+- [Bruna Wundervald](http://brunaw.com/)
+- [Julio Trecenti](https://github.com/jtrecenti), [Curso-R](https://www.curso-r.com/) e [13 aMostra de Estatística - IME  USP](https://www.ime.usp.br/~amostra/) pelo mini-curso de Rmarkdown.
+
+... ?
