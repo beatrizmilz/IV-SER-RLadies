@@ -63,12 +63,23 @@ knitr::include_graphics("img/foto_haydee.JPG")
 ]]
 .column.bg-main2[.content[
 
-- É pesquisadora em mobilidade urbana e ativista pela equidade de gênero e pelo direito à cidade. 
-- Atualmente é consultora do Banco Mundial, CEO da ASK-AR (consultoria em análise de dados), membro do Conselho Deliberativo da AEAMESP (Associação dos Engenheiros e Arquitetos de Metrô) e da comunidade Transparência Hacker.
+- Consultora local do Banco Mundial em Gênero & Transportes
 
-- É co-fundadora dos grupos RLadies - São Paulo, do PoliGNU (Grupo de Estudos de Software Livre da Poli-USP) e da PoliGen (Grupo de Estudos de Gênero da Poli-USP).
+- CEO da ASK-AR (consultoria em análise de dados)
 
-- Cursa doutorado em Smart Cities pelo IME-USP, é mestra em Engenharia e Planejamento de Transportes (Poli-USP) e especialista em Democracia Participativa, Repúblicas e Movimentos Sociais (UFMG) além de ter formação em Engenharia Civil/Arquitetura pela USP (Programa Poli-FAU).
+- Membro do Conselho Deliberativo da AEAMESP (Associação dos Engenheiros e Arquitetos de Metrô)
+
+- Co-fundadora dos grupos RLadies - São Paulo, do PoliGNU (Grupo de Estudos de Software Livre da Poli-USP) e da PoliGen (Grupo de Estudos de Gênero da Poli-USP)
+
+- Doutoranda em Smart Cities pelo IME-USP
+
+- Mestra em Engenharia e Planejamento de Transportes (Poli-USP)
+
+- Especialista em Democracia Participativa, Repúblicas e Movimentos Sociais (UFMG)
+
+- Formação em Engenharia Civil/Arquitetura pela USP (Programa Poli-FAU USP)
+
+- Email: <a href="hsvab@hsvab.eng.br">hsvab@hsvab.eng.br</a>
 
 ]]
 
