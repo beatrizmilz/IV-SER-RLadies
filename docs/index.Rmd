@@ -210,7 +210,7 @@ class: middle, center
 # Linguagem de marcação markdown e arquivos do tipo RMarkdown
 
 ---
-class: middle, center
+class: center
 ## Por que apresentações são importantes? 
 
 É uma das formas de comunicar os resultados!
@@ -222,7 +222,7 @@ knitr::include_graphics("img/data-science.png")
 Fonte: [R for Data Science](http://r4ds.had.co.nz/)
 
 ---
-class: middle, center
+class: center
 ## Por que apresentações são importantes? 
 
 É uma das formas de comunicar os resultados!
@@ -415,7 +415,7 @@ class: middle
 
 - O xaringan é um pacote do R para criar apresentações usando o  [remark.js](http://remarkjs.com) através do Rmarkdown.
 
-```{r echo=FALSE, out.width="30%"}
+```{r echo=FALSE, out.width="20%"}
 knitr::include_graphics("img/xaringan.PNG")
 ```
 
@@ -477,7 +477,7 @@ class: middle
 
 ## Inicie o RSTUDIO:
 
-```{r echo=FALSE, out.width="100%"}
+```{r echo=FALSE, out.width="90%"}
 knitr::include_graphics("img/0.PNG")
 ```
 
@@ -527,7 +527,7 @@ class: middle
 - Cuidado com a **identação**
 - Controla muitas das configurações do documento.
 
-```{r echo=FALSE, out.width="100%"}
+```{r echo=FALSE, out.width="80%"}
 knitr::include_graphics("img/4.PNG")
 ```
 
@@ -666,7 +666,7 @@ class: middle
 - A seguir, os documentos Markdown e de figuras  são processados pela ferramenta pandoc, que converte o arquivo Markdown em um arquivo html, com as figuras anexadas.
 
 
-```{r echo=FALSE, fig.align='center', out.width="100%"}
+```{r echo=FALSE, fig.align='center', out.width="80%"}
 knitr::include_graphics("img/rmd-15-rmd_to_html_fig-1.png")
 ```
 
@@ -686,7 +686,7 @@ knitr::include_graphics("img/5.PNG")
 class:  middle
 
 ## Resultado:
-```{r echo=FALSE, out.width="40%"}
+```{r echo=FALSE, out.width="30%"}
 knitr::include_graphics("img/6.PNG")
 knitr::include_graphics("img/7.PNG")
 ```
@@ -731,7 +731,7 @@ Há uma variedade de opções que podem afetar como os chuncks de código são t
 
 Assim, você pode escrever:
 
-```{r echo=FALSE, fig.align='center'}
+```{r echo=FALSE, out.width="90%"}
 knitr::include_graphics("img/chunk_load_libraries.png")
 ```
  
@@ -935,7 +935,7 @@ knitr::include_graphics("img/github1.jpg")
 ## Compartilhando a apresentação via Github Pages
 3) Coloque um nome e descrição no novo repositório. Deixe como público. 
 
-```{r echo=FALSE, out.width = "100%"}
+```{r echo=FALSE, out.width = "90%"}
 knitr::include_graphics("img/github2.jpg")
 ```
 
