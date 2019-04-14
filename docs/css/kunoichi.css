@@ -141,13 +141,10 @@ body {
 }
 
 p {
-  font-size: 1.1em;
-  line-height: 1.2;
+  font-size: 1.05em;
 }
 
 li {
-  font-size: 1.1em;
-  line-height: 1.2;
+  font-size: 1.05em;
 }
-
 a { color: var(--link-color); text-decoration: none; }
