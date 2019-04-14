@@ -204,15 +204,13 @@ knitr::include_graphics("img/data-science.png")
 Fonte: http://r4ds.had.co.nz/
 
 - Uma das formas de comunicar os resultados!
-
-
-- Hoje iremos praticar como criar uma apresentação utilizando o R e o pacote Xaringan. 
+- O que vocês utilizam em apresentações?
 
 ---
 class: middle
 ## Formas de criar apresentações no R:
 
-* Pacote xaringan - Utiliza RMarkdown
+* Pacote xaringan - Utiliza a biblioteca remark.js do JavaScript para criação de apresentações; Utiliza RMarkdown.
 
 * Outros: 
 
@@ -225,6 +223,7 @@ class: middle
       Obs: para separar entre um slide e outro, usar três *
 
 
+- Hoje iremos praticar como criar uma apresentação utilizando o R e o pacote Xaringan. 
 
 
 ---
@@ -242,6 +241,10 @@ class: middle
 * O markdown é uma linguagem de marcação simples. 
 
 * [Rmarkdown Cheatsheet](http://www.rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf)
+
+* Apresentação Yihui: [Advanced R Markdown](https://slides.yihui.name/2017-rstudio-conf-rmarkdown-Yihui-Xie.html)
+
+* Dica de livro: [R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown/)
 
 ---
 class: middle
@@ -536,6 +539,60 @@ output:
 
 ---
 class: middle
+## RemarkJS
+
+- O xaringan utiliza o seguinte arquivo javascript: https://remarkjs.com/downloads/remark-latest.min.js
+
+- Por padrão,  a apresentação só funcionará online!
+- Como deixar o RemarkJS offline?
+
+```{r}
+xaringan::summon_remark() # o xaringan irá fazer o download
+# da versão mais recente do remark e salvar na pasta /libs
+```
+O yaml deve conter as seguintes linhas: 
+```{r eval=FALSE}
+output:
+  xaringan::moon_reader:
+    chakra: libs/remark-latest.min.js
+    lib_dir: libs
+```
+
+---
+class: middle
+## Outra dica: Encoding
+
+Para evitar problemas de codificação, adicione o encoding no yaml:
+
+```{r eval=FALSE}
+encoding: "UTF-8"
+```
+
+Leia o texto do blog do Yihui: https://yihui.name/en/2018/11/biggest-regret-knitr/
+---
+## Exemplo de yaml desta apresentação
+```{r eval=FALSE}
+---
+title: "Comunicando seus resultados: "
+subtitle: "Criando apresentações com R"
+author: "Beatriz Milz e Haydee Svab - R-Ladies São Paulo"
+date: "20 de maio de 2019  <br> (Atualizado em: `r format(Sys.Date(), format='%d/%m/%Y')`)"
+encoding: "UTF-8"
+output:
+  xaringan::moon_reader:
+    chakra: libs/remark-latest.min.js
+    css: [kunoichi, ninjutsu, rladies-fonts]
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+```
+
+
+---
+class: middle
 ## Chuncks de Código R
 
 - É um campo onde podemos inserir código de R em um arquivo Rmarkdown:
@@ -764,36 +821,26 @@ knitr::include_graphics("https://www.r-project.org/Rlogo.png")
 ```
 
 
-
-
-
-
-
-
-
 ---
-# Outros: Adicionar depois
-xaringan::summon_remark()
-https://remarkjs.com/downloads/remark-latest.min.js
-
-https://pagedown.rbind.io/poster-relaxed
-
-
-
-https://yihui.name/en/2019/02/ultimate-inf-mr/
-
----
+class: middle
 ## Preview da apresentação 
 
 ```{r eval=FALSE}
 xaringan::inf_mr("index.Rmd")
 ```
+- Post do Yihui sobre isso: https://yihui.name/en/2019/02/ultimate-inf-mr/
 
-- Comigo nem sempre funciona :( )
+- Comigo não funciona com o tema Kunoichi :( 
 ---
 ## Salvar a versão em PDF
 
-- O autor do pacote disse que a forma mais confiável é abrir no Google Chrome ou Chromium, e salvar como PDF.  Porém, existe essa função do pacote `pagedown`, que é recente e ainda será melhorada (pode não funcionar muito bem).
+- O autor do pacote disse que a forma mais confiável é abrir no Google Chrome ou Chromium, e salvar como PDF. 
+
+- Porém, existe essa função do pacote `pagedown`, que é recente e ainda será melhorada (pode não funcionar muito bem). 
+
+- Precisa ter o Chrome instalado. 
+
+- Comigo funciona :D
 
 ```{r eval=FALSE, include=TRUE}
 remotes::install_github('rstudio/pagedown')
@@ -806,6 +853,18 @@ pagedown::chrome_print("index.html")
 
 
 Referência: [Apresentação do Yihui na RStudio Conf 2019: pagedown - Creating beautiful PDFs with R Markdown and CSS](https://resources.rstudio.com/rstudio-conf-2019/pagedown-creating-beautiful-pdfs-with-r-markdown-and-css)
+
+
+
+
+
+
+
+
+
+
+
+
 
 ---
 Referências
