@@ -4,10 +4,11 @@ subtitle: "Criando apresentações com R"
 author: "Beatriz Milz e Haydee Svab - R-Ladies São Paulo"
 date: "20 de maio de 2019  <br> (Atualizado em: `r format(Sys.Date(), format='%d/%m/%Y')`)"
 encoding: "UTF-8"
+
 output:
   xaringan::moon_reader:
     chakra: libs/remark-latest.min.js
-    css: [kunoichi, ninjutsu, rladies-fonts]
+    css: ["css/kunoichi.css", "css/ninjutsu.css", "css/rladies-fonts.css"]
     lib_dir: libs
     nature:
       highlightStyle: github
@@ -79,7 +80,7 @@ knitr::include_graphics("img/foto_haydee.JPG")
 
 - Formação em Engenharia Civil/Arquitetura pela USP (Programa Poli-FAU USP)
 
-- Email: <a href="hsvab@hsvab.eng.br">hsvab@hsvab.eng.br</a>
+- Email: <a href="mailto:hsvab@hsvab.eng.br">hsvab@hsvab.eng.br</a>
 
 ]]
 
