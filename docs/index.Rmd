@@ -89,11 +89,11 @@ class: middle
 
 1 - O que é o R-Ladies?
 
-2 - Introdução sobre a linguagem de marcação markdown e sobre arquivos do tipo RMarkdown.
+2 - Linguagem de marcação Markdown e arquivos do tipo RMarkdown
 
-3 - Como criar uma apresentação utilizando o pacote Xaringan. 
+3 - Como criar uma apresentação utilizando o pacote Xaringan
 
-4 - Hospedagem da apresentação utilizando o Github Pages.
+4 - Hospedagem da apresentação utilizando o Github Pages
 
 ---
 
@@ -161,7 +161,8 @@ O R-Ladies dedica-se a proporcionar uma experiência livre de assédio para toda
 
 
 ---
-## R-Ladies no Brasil:
+class:   center, middle
+## R-Ladies no Brasil
 ```{r include=FALSE}
 rladies_br <- data.frame(
 city = c("Florianópolis", "Salvador", "Niterói", "Curitiba", "Belo Horizonte",
@@ -205,27 +206,40 @@ Saiba como em [R-Ladies - How do get involved](https://rladies.org/about-us/help
 ---
 class: middle, center
 
-# Introdução sobre a linguagem de marcação markdown e arquivos do tipo RMarkdown
+# Linguagem de marcação markdown e arquivos do tipo RMarkdown
 
 ---
-class: middle
+class: middle, center
 ## Por que apresentações são importantes? 
 
+É uma das formas de comunicar os resultados!
 
 ```{r echo=FALSE, out.width="100%"}
 knitr::include_graphics("img/data-science.png")
 ```
 
-Fonte: http://r4ds.had.co.nz/
+Fonte: [R for Data Science](http://r4ds.had.co.nz/)
 
-- Uma das formas de comunicar os resultados!
-- O que vocês utilizam em apresentações?
+---
+class: middle, center
+## Por que apresentações são importantes? 
+
+É uma das formas de comunicar os resultados!
+
+```{r echo=FALSE, out.width="100%"}
+knitr::include_graphics("img/data-science.png")
+```
+
+Fonte: [R for Data Science](http://r4ds.had.co.nz/)
+
+### O que vocês utilizam em apresentações?
+
 
 ---
 class: middle
-## Formas de criar apresentações no R:
+## Formas de criar apresentações no R
 
-* Pacote xaringan - Utiliza a biblioteca remark.js do JavaScript para criação de apresentações; Utiliza RMarkdown.
+* Pacote **Xaringan** - Utiliza RMarkdown e a biblioteca remark.js do JavaScript para criação de apresentações.
 
 * Outros: 
 
@@ -235,27 +249,25 @@ class: middle
       
       * output: **slidy_presentation** ->  slidy (HTML)
       
-      Obs: para separar entre um slide e outro, usar três *
+      Obs.: para separar entre um slide e outro, usar três *
 
 
-- Hoje iremos praticar como criar uma apresentação utilizando o R e o pacote Xaringan. 
+### Foco de hoje
+Praticar como criar uma apresentação utilizando o R e o pacote Xaringan
 
 
 ---
 class: middle
 
-## Rmarkdown
-* É um tipo de arquivo que suporta códigos em R, texto, markdown e outros formatos.
-
-* Apresenta os seus códigos, o resultado, e também os seus comentários.
+## RMarkdown
 
 * Arquivos **.Rmd** são reprodutíveis.
 
+* É um tipo de arquivo que suporta códigos em R, texto, markdown e outros formatos.
+
+* Apresenta os seus códigos, seus resultados, e também seus comentários.
+
 * São interessantes para trabalhar em equipe, para comunicar seus resultados, e para desenvolver seus códigos em R.
-
-* O markdown é uma linguagem de marcação simples. 
-
-* [Rmarkdown Cheatsheet](http://www.rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf)
 
 * Apresentação Yihui: [Advanced R Markdown](https://slides.yihui.name/2017-rstudio-conf-rmarkdown-Yihui-Xie.html)
 
@@ -265,6 +277,7 @@ class: middle
 class: middle
 
 ## Rmarkdown
+
 * Possibilita exportar diferentes tipos de arquivos.
 
 ```{r echo=FALSE, fig.align='center', out.width="50%"}
@@ -277,11 +290,11 @@ class: middle
 
 * O Rmarkdown utiliza a linguagem de marcação Markdown.
 
-* O markdown é uma linguagem de marcação simples. 
-
-* [Rmarkdown Cheatsheet 2.0](http://www.rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf) e [Rmarkdown Cheatsheet](https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf).
+* Markdown é uma linguagem de marcação simples. 
 
 * Elaborada para ser fácil de ler, fácil de escrever.
+
+* Dica rápida: [Rmarkdown Cheatsheet 2.0](http://www.rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf) e [Rmarkdown Cheatsheet](https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf).
 
 ---
 ## Markdown
@@ -307,6 +320,7 @@ _Itálico_: `_italics_`
 ---
 class: middle
 ## Fazendo uma lista
+
 Você pode fazer uma lista escrevendo com hífens ou asteriscos, como a seguir:
 
 `* negrito com asteriscos duplos`
@@ -315,7 +329,7 @@ Você pode fazer uma lista escrevendo com hífens ou asteriscos, como a seguir:
 
 `* fonte do tipo código com crase`
 
-ou dessa forma:
+ou desta forma:
 
 `- negrito com asteriscos duplos`
 
@@ -329,7 +343,7 @@ Cada um vai aparecer como:
 - itálico com underline
 - fonte do tipo código com crase
 
-Referência: [SW Carpentry](https://swcarpentry.github.io/r-novice-gapminder/15-knitr-markdown/index.html)
+Referência: [Software Carpentry](https://swcarpentry.github.io/r-novice-gapminder/15-knitr-markdown/index.html)
 
 
 ---
@@ -350,11 +364,12 @@ Isso irá aparecer como:
 1. fonte do tipo código com crase
 
 
-Referência: [SW Carpentry](https://swcarpentry.github.io/r-novice-gapminder/15-knitr-markdown/index.html)
+Referência: [Software Carpentry](https://swcarpentry.github.io/r-novice-gapminder/15-knitr-markdown/index.html)
+
 
 ---
 class: middle
-## Mais de Markdown
+## Um pouco mais de Markdown
 
 Você pode fazer um hiperlink dessa forma: `[**texto para mostrar**](http://the-web-page.com)`.
 
@@ -369,13 +384,24 @@ Se você sabe como escrever equações em LaTeX, ficará feliz em saber que pode
 
 $$y = \mu + \sum_{i=1}^p \beta_i x_i + \epsilon$$
 
-Referência: [SW Carpentry](https://swcarpentry.github.io/r-novice-gapminder/15-knitr-markdown/index.html)
+Referência: [Software Carpentry](https://swcarpentry.github.io/r-novice-gapminder/15-knitr-markdown/index.html)
+
 
 ---
-class: middle, center
-## Mais sobre Markdown:
-Consulte a [Cheatsheet](https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf)!
+class: middle
+## Mais sobre Markdown
 
+Não esqueça que você pode consultar:
+
+- [RMarkdown Cheatsheet](https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf)
+
+- [R Markdown from RStudio](https://rmarkdown.rstudio.com/lesson-1.html)
+
+- [R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown/)
+
+- [R for Data Science - Cap 27: R Markdown](https://r4ds.had.co.nz/r-markdown.html)
+
+- [Software Carpentry - Producing Reports With knitr ](https://swcarpentry.github.io/r-novice-gapminder/15-knitr-markdown/)
 
 ---
 class: middle, center
