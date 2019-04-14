@@ -63,12 +63,23 @@ knitr::include_graphics("img/foto_haydee.JPG")
 ]]
 .column.bg-main2[.content[
 
-- É pesquisadora em mobilidade urbana e ativista pela equidade de gênero e pelo direito à cidade. 
-- Atualmente é consultora do Banco Mundial, CEO da ASK-AR (consultoria em análise de dados), membro do Conselho Deliberativo da AEAMESP (Associação dos Engenheiros e Arquitetos de Metrô) e da comunidade Transparência Hacker.
+- Consultora local do Banco Mundial em Gênero & Transportes
 
-- É co-fundadora dos grupos RLadies - São Paulo, do PoliGNU (Grupo de Estudos de Software Livre da Poli-USP) e da PoliGen (Grupo de Estudos de Gênero da Poli-USP).
+- CEO da ASK-AR (consultoria em análise de dados)
 
-- Cursa doutorado em Smart Cities pelo IME-USP, é mestra em Engenharia e Planejamento de Transportes (Poli-USP) e especialista em Democracia Participativa, Repúblicas e Movimentos Sociais (UFMG) além de ter formação em Engenharia Civil/Arquitetura pela USP (Programa Poli-FAU).
+- Membro do Conselho Deliberativo da AEAMESP (Associação dos Engenheiros e Arquitetos de Metrô)
+
+- Co-fundadora dos grupos RLadies - São Paulo, do PoliGNU (Grupo de Estudos de Software Livre da Poli-USP) e da PoliGen (Grupo de Estudos de Gênero da Poli-USP)
+
+- Doutoranda em Smart Cities pelo IME-USP
+
+- Mestra em Engenharia e Planejamento de Transportes (Poli-USP)
+
+- Especialista em Democracia Participativa, Repúblicas e Movimentos Sociais (UFMG)
+
+- Formação em Engenharia Civil/Arquitetura pela USP (Programa Poli-FAU USP)
+
+- Email: <a href="hsvab@hsvab.eng.br">hsvab@hsvab.eng.br</a>
 
 ]]
 
@@ -105,6 +116,7 @@ Fonte: [About us - R-Ladies](https://rladies.org/about-us/), [Meetup R-Ladies S�
 ---
 class:   center, middle
 ## Para quem?
+
 Nosso principal público-alvo são as pessoas que se identificam com o gênero feminino, portanto, mulheres cis, mulheres trans, bem como pessoas não-binárias e queer.
 
 ## Missão
@@ -142,7 +154,7 @@ class:   center, middle
 ## Código de conduta
 
 
-O R-Ladies dedica-se a proporcionar uma experiência livre de assédio para todos. Não toleramos nenhuma forma de assédio aos participantes.
+O R-Ladies dedica-se a proporcionar uma experiência livre de assédio para todas as pessoas partcicipantes, desta forma, não é tolerada nenhuma forma de assédio.
 
 
 [Código de conduta - R-Ladies](https://github.com/rladies/starter-kit/wiki/Code-of-Conduct#portuguese)
@@ -172,7 +184,7 @@ DT::datatable(rladies_br, autoHideNavigation = TRUE)
 class:  center, middle
 ## Como saber mais?
 
-[Meetup](https://www.meetup.com/pt-BR/R-Ladies-Sao-Paulo)
+Website RLadies Global: [https://rladies.org/](https://rladies.org/)
 
 Twitter: [@RLadiesGlobal](https://twitter.com/rladiesglobal), [@RLadiesSaoPaulo](https://twitter.com/RLadiesSaoPaulo)
 
@@ -180,17 +192,20 @@ Instagram: [@RLadiesSaoPaulo](http://instagram.com/RLadiesSaoPaulo)
 
 Facebook: [@RLadiesSaoPaulo](http://facebook.com/RLadiesSaoPaulo)
 
-Website: [https://rladies.org/](https://rladies.org/)
+MeetUp: [https://www.meetup.com/pt-BR/R-Ladies-Sao-Paulo](https://www.meetup.com/pt-BR/R-Ladies-Sao-Paulo)
+
 
 R-Ladies LATAM Blog (Latin America) - Em breve!
 
 
-[R-Ladies - How do get involved](https://rladies.org/about-us/help/)
+### Não tem capítulo na sua cidade e quer abrir um?
+
+Saiba como em [R-Ladies - How do get involved](https://rladies.org/about-us/help/)
 
 ---
 class: middle, center
 
-# Introdução sobre a linguagem de marcação markdown e arquivos do tipo RMarkdown.
+# Introdução sobre a linguagem de marcação markdown e arquivos do tipo RMarkdown
 
 ---
 class: middle
