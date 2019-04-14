@@ -834,7 +834,7 @@ xaringan::inf_mr("index.Rmd")
 ---
 ## Salvar a versão em PDF
 
-- O autor do pacote disse que a forma mais confiável é abrir no Google Chrome ou Chromium, e salvar como PDF. 
+- O autor do pacote disse que a forma mais confiável é abrir no Google Chrome ou Chromium, e salvar como PDF. (Usando o navegador Chrome ou no Chromium, imprima para arquivo (Ctrl + P). Não dá certo com o Mozilla Firefox).
 
 - Porém, existe essa função do pacote `pagedown`, que é recente e ainda será melhorada (pode não funcionar muito bem). 
 
@@ -855,31 +855,133 @@ pagedown::chrome_print("index.html")
 Referência: [Apresentação do Yihui na RStudio Conf 2019: pagedown - Creating beautiful PDFs with R Markdown and CSS](https://resources.rstudio.com/rstudio-conf-2019/pagedown-creating-beautiful-pdfs-with-r-markdown-and-css)
 
 
+---
+
+class: middle, center
+
+# Hospedagem da apresentação utilizando o Github Pages.
+---
+class: middle
+## Compartilhando a apresentação
+
+- Já vimos que é possível exportar um PDF;
+
+- O formato que utilizamos para exportar uma apresentação elaborada com o xaringan é **.html**. Para isso, é necessário apertar o botão Knit (mostrado anteriormente).
+
+- O knit gera um arquivo .html -> porém para que ele funcione, depende de outros arquivos locais (salvos na pasta do projeto).
 
 
+- É possível hospedar o seu arquivo de apresentação em sites como o [Github Pages](https://github.com/) e [Netlify](https://www.netlify.com/).
+
+---
+class: middle
+## Passo a passo: Como hospedagem da apresentação utilizando o Github Pages?
 
 
+1) Crie uma conta gratuita no github: https://github.com/
+
+2) Na sua conta do github, crie um novo repositório (New repository)
+
+```{r echo=FALSE, out.width = "50%"}
+knitr::include_graphics("img/github1.jpg")
+```
 
 
+* OBS: [Esse post do @w_oliveiras](https://medium.com/trainingcenter/plano-para-estudar-git-e-github-enquanto-aprende-programa%C3%A7%C3%A3o-f5d5f986f459) é sobre como usar git e github utilizando o terminal/linha de comando e pode ajudar! 
+
+---
+## Compartilhando a apresentação via Github Pages
+3) Coloque um nome e descrição no novo repositório. Deixe como público. 
+
+```{r echo=FALSE, out.width = "100%"}
+knitr::include_graphics("img/github2.jpg")
+```
+
+---
+## Compartilhando a apresentação via Github Pages
+4) Repositório criado! 
+
+```{r echo=FALSE, out.width = "100%"}
+knitr::include_graphics("img/github3.jpg")
+```
 
 
+---
+## Compartilhando a apresentação via Github Pages
+5) Githubpages e pasta DOCS.
+
+- Para o github pages funcionar, você precisa adicionar o conteúdo em uma pasta chamada `docs`. Então, antes de fazer upload, no seu computador/workingdirectory/projeto, crie uma pasta com o nome `docs` e coloque todos os arquivos da sua apresentação nessa pasta.
+
+- De preferência, a sua apresentação deve se chamar index.html (após compilado).
+
+```{r echo=FALSE, out.width = "100%"}
+knitr::include_graphics("img/pastadocs.jpg")
+```
+
+
+---
+## Compartilhando a apresentação via Github Pages
+- Área de upload do seu repositório do github (essa não é a única forma de realizar upload, também é possível através do github desktop e pelo terminal de comando).
+
+```{r echo=FALSE, out.width = "100%"}
+knitr::include_graphics("img/github4.jpg")
+```
 
 
 
 ---
-Referências
-- [SW Carpentry](https://swcarpentry.github.io/r-novice-gapminder/15-knitr-markdown/index.html)
-- [Apresentação do Yihui na RStudio Conf 2019: pagedown - Creating beautiful PDFs with R Markdown and CSS](https://resources.rstudio.com/rstudio-conf-2019/pagedown-creating-beautiful-pdfs-with-r-markdown-and-css)
+## Compartilhando a apresentação via Github Pages
+6) Faça o upload da pasta docs INTEIRA no seu repositório do github. 
+
+```{r echo=FALSE, out.width = "100%"}
+knitr::include_graphics("img/github5.jpg")
+```
+
+
+---
+## Compartilhando a apresentação via Github Pages
+7) Coloque uma mensagem no commit, para deixar registrado que alteração foi feita.
+
+```{r echo=FALSE, out.width = "100%"}
+knitr::include_graphics("img/github6.jpg")
+```
+
+---
+## Compartilhando a apresentação via Github Pages
+8) No seu repositório, clique em Settings...
+```{r echo=FALSE, out.width = "100%"}
+knitr::include_graphics("img/github7.jpg")
+```
+---
+## Compartilhando a apresentação via Github Pages
+8) ... e na seção Github Pages, selecione **master branch /docs folder**:.
+
+```{r echo=FALSE, out.width = "100%"}
+knitr::include_graphics("img/github8.jpg")
+```
+
+**Resultado**: https://beatrizmilz.github.io/teste/ 
+---
+class:  center, middle
+## Agora é só enviar o link das suas apresentações lindas!
+Dica: Criar um URL mais curto com o [Bitly](https://bitly.com/)
+
+
+```{r echo=FALSE, out.width="50%"}
+knitr::include_graphics("https://media.giphy.com/media/pOTEhtq8Jv7voNl7mb/giphy.gif")
+```
+
+
+
 
 ---
 class:  middle
 
-# Obrigada!
+## Obrigada!
 Apresentação elaborada com [Xaringan](https://github.com/yihui/xaringan) e [Kunoichi](https://github.com/emitanaka/ninja-theme).
 
-Agradecimentos especiais:
-
-- [Bruna Wundervald](http://brunaw.com/)
+Agradecimentos especiais/Special Thanks:
+- [Yihui Xie](https://github.com/yihui) - Thanks for the packages, books, blogposts, videos... 
+- [Bruna Wundervald](http://brunaw.com/) - Por ajudar na apresentação.
 - [Julio Trecenti](https://github.com/jtrecenti), [Curso-R](https://www.curso-r.com/) e [13 aMostra de Estatística - IME  USP](https://www.ime.usp.br/~amostra/) pelo mini-curso de Rmarkdown.
 
-... ?

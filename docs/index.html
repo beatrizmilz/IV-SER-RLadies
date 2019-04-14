@@ -157,8 +157,8 @@ O R-Ladies dedica-se a proporcionar uma experiência livre de assédio para todo
 
 Atualizado em: 13/04/2019. Fonte: [R-Ladies Shiny App](https://gqueiroz.shinyapps.io/rshinylady/) 
 
-<div id="htmlwidget-b35c56439fc9011050e2" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-b35c56439fc9011050e2">{"x":{"filter":"none","autoHideNavigation":true,"data":[["1","2","3","4","5","6","7","8","9","10"],["Florianópolis","Salvador","Niterói","Curitiba","Belo Horizonte","São Paulo","Porto Alegre","Natal","Americana","Rio de Janeiro"],["2019-04-07","2018-07-23","2018-06-04","2018-05-29","2018-04-20","2018-02-10","2017-10-30","2017-09-25","2017-06-24","2017-02-27"],[22,114,289,151,509,343,218,135,28,394]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>city<\/th>\n      <th>dt_created<\/th>\n      <th>members<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":3},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-e5b3df21bb83fc9e2d0b" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-e5b3df21bb83fc9e2d0b">{"x":{"filter":"none","autoHideNavigation":true,"data":[["1","2","3","4","5","6","7","8","9","10"],["Florianópolis","Salvador","Niterói","Curitiba","Belo Horizonte","São Paulo","Porto Alegre","Natal","Americana","Rio de Janeiro"],["2019-04-07","2018-07-23","2018-06-04","2018-05-29","2018-04-20","2018-02-10","2017-10-30","2017-09-25","2017-06-24","2017-02-27"],[22,114,289,151,509,343,218,135,28,394]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>city<\/th>\n      <th>dt_created<\/th>\n      <th>members<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":3},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
 
 ---
 class:  center, middle
@@ -756,8 +756,8 @@ class: middle
 DT::datatable(rladies_br)
 ```
 
-<div id="htmlwidget-81bd65fb8b4c2ac38af8" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-81bd65fb8b4c2ac38af8">{"x":{"filter":"none","data":[["1","2","3","4","5","6","7","8","9","10"],["Florianópolis","Salvador","Niterói","Curitiba","Belo Horizonte","São Paulo","Porto Alegre","Natal","Americana","Rio de Janeiro"],["2019-04-07","2018-07-23","2018-06-04","2018-05-29","2018-04-20","2018-02-10","2017-10-30","2017-09-25","2017-06-24","2017-02-27"],[22,114,289,151,509,343,218,135,28,394]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>city<\/th>\n      <th>dt_created<\/th>\n      <th>members<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":3},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-7bd1a91b02a4e164ea5c" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-7bd1a91b02a4e164ea5c">{"x":{"filter":"none","data":[["1","2","3","4","5","6","7","8","9","10"],["Florianópolis","Salvador","Niterói","Curitiba","Belo Horizonte","São Paulo","Porto Alegre","Natal","Americana","Rio de Janeiro"],["2019-04-07","2018-07-23","2018-06-04","2018-05-29","2018-04-20","2018-02-10","2017-10-30","2017-09-25","2017-06-24","2017-02-27"],[22,114,289,151,509,343,218,135,28,394]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>city<\/th>\n      <th>dt_created<\/th>\n      <th>members<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":3},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
 ---
 class: middle
 ## Adicionando imagens usando o Knitr
@@ -823,7 +823,7 @@ xaringan::inf_mr("index.Rmd")
 ---
 ## Salvar a versão em PDF
 
-- O autor do pacote disse que a forma mais confiável é abrir no Google Chrome ou Chromium, e salvar como PDF. 
+- O autor do pacote disse que a forma mais confiável é abrir no Google Chrome ou Chromium, e salvar como PDF. (Usando o navegador Chrome ou no Chromium, imprima para arquivo (Ctrl + P). Não dá certo com o Mozilla Firefox).
 
 - Porém, existe essa função do pacote `pagedown`, que é recente e ainda será melhorada (pode não funcionar muito bem). 
 
@@ -846,34 +846,115 @@ pagedown::chrome_print("index.html")
 Referência: [Apresentação do Yihui na RStudio Conf 2019: pagedown - Creating beautiful PDFs with R Markdown and CSS](https://resources.rstudio.com/rstudio-conf-2019/pagedown-creating-beautiful-pdfs-with-r-markdown-and-css)
 
 
+---
+
+class: middle, center
+
+# Hospedagem da apresentação utilizando o Github Pages.
+---
+class: middle
+## Compartilhando a apresentação
+
+- Já vimos que é possível exportar um PDF;
+
+- O formato que utilizamos para exportar uma apresentação elaborada com o xaringan é **.html**. Para isso, é necessário apertar o botão Knit (mostrado anteriormente).
+
+- O knit gera um arquivo .html -&gt; porém para que ele funcione, depende de outros arquivos locais (salvos na pasta do projeto).
 
 
+- É possível hospedar o seu arquivo de apresentação em sites como o [Github Pages](https://github.com/) e [Netlify](https://www.netlify.com/).
+
+---
+class: middle
+## Passo a passo: Como hospedagem da apresentação utilizando o Github Pages?
 
 
+1) Crie uma conta gratuita no github: https://github.com/
+
+2) Na sua conta do github, crie um novo repositório (New repository)
+
+&lt;img src="img/github1.jpg" width="50%" style="display: block; margin: auto;" /&gt;
 
 
+* OBS: [Esse post do @w_oliveiras](https://medium.com/trainingcenter/plano-para-estudar-git-e-github-enquanto-aprende-programa%C3%A7%C3%A3o-f5d5f986f459) é sobre como usar git e github utilizando o terminal/linha de comando e pode ajudar! 
+
+---
+## Compartilhando a apresentação via Github Pages
+3) Coloque um nome e descrição no novo repositório. Deixe como público. 
+
+&lt;img src="img/github2.jpg" width="100%" style="display: block; margin: auto;" /&gt;
+
+---
+## Compartilhando a apresentação via Github Pages
+4) Repositório criado! 
+
+&lt;img src="img/github3.jpg" width="100%" style="display: block; margin: auto;" /&gt;
 
 
+---
+## Compartilhando a apresentação via Github Pages
+5) Githubpages e pasta DOCS.
+
+- Para o github pages funcionar, você precisa adicionar o conteúdo em uma pasta chamada `docs`. Então, antes de fazer upload, no seu computador/workingdirectory/projeto, crie uma pasta com o nome `docs` e coloque todos os arquivos da sua apresentação nessa pasta.
+
+- De preferência, a sua apresentação deve se chamar index.html (após compilado).
+
+&lt;img src="img/pastadocs.jpg" width="100%" style="display: block; margin: auto;" /&gt;
+
+
+---
+## Compartilhando a apresentação via Github Pages
+- Área de upload do seu repositório do github (essa não é a única forma de realizar upload, também é possível através do github desktop e pelo terminal de comando).
+
+&lt;img src="img/github4.jpg" width="100%" style="display: block; margin: auto;" /&gt;
 
 
 
 ---
-Referências
-- [SW Carpentry](https://swcarpentry.github.io/r-novice-gapminder/15-knitr-markdown/index.html)
-- [Apresentação do Yihui na RStudio Conf 2019: pagedown - Creating beautiful PDFs with R Markdown and CSS](https://resources.rstudio.com/rstudio-conf-2019/pagedown-creating-beautiful-pdfs-with-r-markdown-and-css)
+## Compartilhando a apresentação via Github Pages
+6) Faça o upload da pasta docs INTEIRA no seu repositório do github. 
+
+&lt;img src="img/github5.jpg" width="100%" style="display: block; margin: auto;" /&gt;
+
+
+---
+## Compartilhando a apresentação via Github Pages
+7) Coloque uma mensagem no commit, para deixar registrado que alteração foi feita.
+
+&lt;img src="img/github6.jpg" width="100%" style="display: block; margin: auto;" /&gt;
+
+---
+## Compartilhando a apresentação via Github Pages
+8) No seu repositório, clique em Settings...
+&lt;img src="img/github7.jpg" width="100%" style="display: block; margin: auto;" /&gt;
+---
+## Compartilhando a apresentação via Github Pages
+8) ... e na seção Github Pages, selecione **master branch /docs folder**:.
+
+&lt;img src="img/github8.jpg" width="100%" style="display: block; margin: auto;" /&gt;
+
+**Resultado**: https://beatrizmilz.github.io/teste/ 
+---
+class:  center, middle
+## Agora é só enviar o link das suas apresentações lindas!
+Dica: Criar um URL mais curto com o [Bitly](https://bitly.com/)
+
+
+&lt;img src="https://media.giphy.com/media/pOTEhtq8Jv7voNl7mb/giphy.gif" width="50%" style="display: block; margin: auto;" /&gt;
+
+
+
 
 ---
 class:  middle
 
-# Obrigada!
+## Obrigada!
 Apresentação elaborada com [Xaringan](https://github.com/yihui/xaringan) e [Kunoichi](https://github.com/emitanaka/ninja-theme).
 
-Agradecimentos especiais:
-
-- [Bruna Wundervald](http://brunaw.com/)
+Agradecimentos especiais/Special Thanks:
+- [Yihui Xie](https://github.com/yihui) - Thanks for the packages, books, blogposts, videos... 
+- [Bruna Wundervald](http://brunaw.com/) - Por ajudar na apresentação.
 - [Julio Trecenti](https://github.com/jtrecenti), [Curso-R](https://www.curso-r.com/) e [13 aMostra de Estatística - IME  USP](https://www.ime.usp.br/~amostra/) pelo mini-curso de Rmarkdown.
-
-... ?
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="libs/remark-latest.min.js"></script>
