@@ -142,9 +142,11 @@ body {
 
 p {
   font-size: 1.05em;
+  text-align: justify;
 }
 
 li {
   font-size: 1.05em;
+  text-align: justify;
 }
 a { color: var(--link-color); text-decoration: none; }
