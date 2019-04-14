@@ -798,7 +798,7 @@ class: middle
 
 - Crie um chunk, e escreva o código que você geralmente utiliza para criar um gráfico :) 
 
-```{r message=FALSE, warning=FALSE, out.width="80%"}
+```{r message=FALSE, warning=FALSE, out.width="45%"}
 library(tidyverse)
 ggplot(data = mtcars, mapping = aes(x = wt, y = mpg)) + geom_point() + 
   stat_smooth(method = 'lm') + facet_grid(am ~ cyl)
