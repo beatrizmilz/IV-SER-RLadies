@@ -97,8 +97,6 @@ class: middle
 4 - Hospedagem da apresentação utilizando o Github Pages
 
 ---
-
-
 class:  center, middle
 # O que é o R-Ladies?
 
@@ -595,8 +593,8 @@ class: middle
 ## Outro tema RLadies: Kunoichi
 - É esse tema que estamos usando :)
 
-```{r echo=FALSE, out.width="20%"}
-knitr::include_graphics("img/kunoichi.jpg")
+```{r echo=FALSE, out.width="30%"}
+knitr::include_graphics("img/kunoichi.svg")
 ```
 
 ```{r  eval=FALSE, include=TRUE}
