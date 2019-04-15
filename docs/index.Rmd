@@ -986,7 +986,7 @@ xaringan::inf_mr("index.Rmd")
 remotes::install_github('rstudio/pagedown')
 ```
 
-```{r eval=FALSE}
+```{r}
 pagedown::chrome_print("index.html")
 ```
 
