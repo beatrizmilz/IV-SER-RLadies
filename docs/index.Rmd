@@ -716,9 +716,8 @@ class:  middle
 
 ## Resultado:
 
-```{r echo=FALSE, out.width="30%"}
+```{r echo=FALSE, out.width="90%"}
 knitr::include_graphics("img/6.PNG")
-knitr::include_graphics("img/7.PNG")
 ```
 
 - O knit exportará um arquivo do tipo html
