@@ -4,3 +4,5 @@ Repositório contendo a apresentação realizada por Beatriz Milz e Haydee Svab 
 Link do evento: http://ser.uff.br/minicursos-presenciais-3/
 
 Apresentação: https://beatrizmilz.github.io/IV-SER-RLadies/
+
+Apresentação em PDF: https://beatrizmilz.github.io/IV-SER-RLadies/index.pdf
