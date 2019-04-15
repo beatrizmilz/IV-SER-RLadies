@@ -96,6 +96,9 @@ class: middle
 
 4 - Hospedagem da apresentação utilizando o Github Pages
 
+```{r echo=FALSE, out.width="40%"}
+knitr::include_graphics("img/seruff.png")
+```
 ---
 class:  center, middle
 # O que é o R-Ladies?
@@ -1107,7 +1110,7 @@ knitr::include_graphics("img/github8.jpg")
 
 ---
 class:  center, middle
-## Agora é só enviar o link das suas apresentações lindas!
+## Agora é só enviar o link da sua apresentação!
 
 <center> Última dica: Você pode criar URL mais curtas com o <a href="https://bitly.com/"> Bitly </a> </center>
 
