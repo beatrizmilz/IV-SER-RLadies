@@ -847,10 +847,8 @@ Fonte do exemplo: http://stcorp.nl/R_course/tutorial_ggplot2.html
 
 ---
 class: middle
-
 ## Exemplo: adicionando uma tabela
 
-Dica: Usar a função DT::datatable()
 ```{r }
 DT::datatable(rladies_br)
 ```
