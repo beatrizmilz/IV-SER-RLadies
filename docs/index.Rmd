@@ -453,7 +453,21 @@ knitr::include_graphics("img/yihui.png")
 
 
 _<center> Thanks Yihui for this amazing package! </center>_
+---
+## Estrutura da apresentação
+- No xaringan, utilizamos o arquivo `.Rmd` para escrever a apresentação, e é compilado para um arquivo `.html`
 
+- Esse arquivo `.html` é interpretado pelo navegador (ex. Chrome), utilizando também os arquivos `.css` e `.js`
+```{r echo=FALSE, out.width="20%"}
+knitr::include_graphics("img/html-css-javascript.jpg")
+```
+- **HTML** (HyperText Markup Language - Linguagem de Marcação de Hipertexto) - é uma linguagem de marcação, é usado para estruturar a página.
+
+- **CSS** (Cascading Style Sheets - Folha de Estilo em Cascata) - é usado para estilizar os elementos escritos no HTML.
+
+- **Javascript** - é uma linguagem de programação, roda no navegador e permite que as páginas sejam dinâmicas.
+
+- Se quiser aprender mais sobre, existem muitos materiais gratuitos na internet. Ex: [FreeCodeCamp](https://www.freecodecamp.org).
 ---
 class: middle
 
@@ -499,7 +513,7 @@ class: middle
 
 - Inicie o RStudio:
 
-```{r echo=FALSE, out.width="90%"}
+```{r echo=FALSE, out.width="80%"}
 knitr::include_graphics("img/0.PNG")
 ```
 
@@ -582,7 +596,7 @@ output:
     css: ["rladies", "rladies-fonts"]
 ```
 - Criado por/Made by: [Alison Presmanes Hill](https://alison.rbind.io/post/r-ladies-slides/)
-* Se você entende de CSS, é possível adaptar os temas e também criá-los :)
+
 
 ```{r echo=FALSE, out.width="40%"}
 knitr::include_graphics("img/nice-woman.gif")
@@ -604,10 +618,46 @@ output:
 ```
 
 - Criado por/Made by: [Emi Tanaka](https://github.com/emitanaka/ninja-theme)
+---
+class: middle
+## CSS
+- Utilizando o CSS, é possível adaptar os temas e também criá-los :)
+
+- No yaml, no atributo: `output: xaringan::moon_reader: css:` (onde definimos o nome dos temas), aponte o arquivo `.css` que deseja utilizar (entre aspas).
+
+- Para manter o diretório organizado, é aconselhável criar uma pasta chamada css e colocar os arquivos `.css` nessa pasta.
+
+
+- Exemplo: 
+
+```{r eval=FALSE}
+output:
+  xaringan::moon_reader:
+    css: ["css/rladies.css", "css/rladies-fonts.css"]
+```
 
 ---
 class: middle
-## RemarkJS
+## CSS
+- Para adaptar algum tema (alterar estilos específicos):
+
+1 - Copie os arquivos originais do tema para a sua pasta `/css` (procure no seu diretório a pasta que contém os arquivos originais, geralmente estão em `libs/remark-css-0.0.1`);
+  
+2 - Especifique no `yaml` o nome e pasta dos arquivos novos. Exemplo: 
+
+```{r eval=FALSE}
+output:
+  xaringan::moon_reader:
+    css: ["css/rladies.css", "css/rladies-fonts.css"]
+```
+  
+3 - Altere o código `.css` dos novos arquivos para personalizar a apresentação.
+  
+Dica: No navegador, o atalho `ctrl + shift + c` pode ajudar a inspecionar os elementos. 
+
+---
+class: middle
+## JavaScript - RemarkJS
 
 - O Xaringan utiliza o seguinte arquivo javascript: https://remarkjs.com/downloads/remark-latest.min.js
 
@@ -615,7 +665,7 @@ class: middle
 
 - Como deixar o RemarkJS offline?
 
-```{r}
+```{r eval=FALSE}
 xaringan::summon_remark() # o xaringan irá fazer o download
 # da versão mais recente do remark e salvar na pasta /libs
 ```
@@ -652,7 +702,8 @@ encoding: "UTF-8"
 output:
   xaringan::moon_reader:
     chakra: libs/remark-latest.min.js
-    css: [kunoichi, ninjutsu, rladies-fonts]
+    css: ["css/kunoichi.css", "css/ninjutsu.css", 
+          "css/rladies-fonts.css"]
     lib_dir: libs
     nature:
       highlightStyle: github
@@ -980,7 +1031,7 @@ knitr::include_graphics("img/github1.jpg")
 
 3) Coloque um nome e descrição no novo repositório e deixe-o público
 
-```{r echo=FALSE, out.width = "90%"}
+```{r echo=FALSE, out.width = "80%"}
 knitr::include_graphics("img/github2.jpg")
 ```
 

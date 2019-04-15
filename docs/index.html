@@ -168,8 +168,8 @@ class:   center, middle
 
 Atualizado em: 13/04/2019. Fonte: [R-Ladies Shiny App](https://gqueiroz.shinyapps.io/rshinylady/) 
 
-<div id="htmlwidget-ae13f8e76fcd7af33b3c" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-ae13f8e76fcd7af33b3c">{"x":{"filter":"none","autoHideNavigation":true,"data":[["1","2","3","4","5","6","7","8","9","10"],["Florianópolis","Salvador","Niterói","Curitiba","Belo Horizonte","São Paulo","Porto Alegre","Natal","Americana","Rio de Janeiro"],["2019-04-07","2018-07-23","2018-06-04","2018-05-29","2018-04-20","2018-02-10","2017-10-30","2017-09-25","2017-06-24","2017-02-27"],[22,114,289,151,509,343,218,135,28,394]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>city<\/th>\n      <th>dt_created<\/th>\n      <th>members<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":3},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-87285cea0e4ed6e90d7a" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-87285cea0e4ed6e90d7a">{"x":{"filter":"none","autoHideNavigation":true,"data":[["1","2","3","4","5","6","7","8","9","10"],["Florianópolis","Salvador","Niterói","Curitiba","Belo Horizonte","São Paulo","Porto Alegre","Natal","Americana","Rio de Janeiro"],["2019-04-07","2018-07-23","2018-06-04","2018-05-29","2018-04-20","2018-02-10","2017-10-30","2017-09-25","2017-06-24","2017-02-27"],[22,114,289,151,509,343,218,135,28,394]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>city<\/th>\n      <th>dt_created<\/th>\n      <th>members<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":3},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
 
 ---
 class:  center, middle
@@ -433,7 +433,19 @@ class: middle
 
 
 _&lt;center&gt; Thanks Yihui for this amazing package! &lt;/center&gt;_
+---
+## Estrutura da apresentação
+- No xaringan, utilizamos o arquivo `.Rmd` para escrever a apresentação, e é compilado para um arquivo `.html`
 
+- Esse arquivo `.html` é interpretado pelo navegador (ex. Chrome), utilizando também os arquivos `.css` e `.js`
+&lt;img src="img/html-css-javascript.jpg" width="20%" style="display: block; margin: auto;" /&gt;
+- **HTML** (HyperText Markup Language - Linguagem de Marcação de Hipertexto) - é uma linguagem de marcação, é usado para estruturar a página.
+
+- **CSS** (Cascading Style Sheets - Folha de Estilo em Cascata) - é usado para estilizar os elementos escritos no HTML.
+
+- **Javascript** - é uma linguagem de programação, roda no navegador e permite que as páginas sejam dinâmicas.
+
+- Se quiser aprender mais sobre, existem muitos materiais gratuitos na internet. Ex: [FreeCodeCamp](https://www.freecodecamp.org).
 ---
 class: middle
 
@@ -481,7 +493,7 @@ class: middle
 
 - Inicie o RStudio:
 
-&lt;img src="img/0.PNG" width="90%" style="display: block; margin: auto;" /&gt;
+&lt;img src="img/0.PNG" width="80%" style="display: block; margin: auto;" /&gt;
 
 - Instale os pacotes:
 
@@ -570,7 +582,7 @@ output:
     css: ["rladies", "rladies-fonts"]
 ```
 - Criado por/Made by: [Alison Presmanes Hill](https://alison.rbind.io/post/r-ladies-slides/)
-* Se você entende de CSS, é possível adaptar os temas e também criá-los :)
+
 
 &lt;img src="img/nice-woman.gif" width="40%" style="display: block; margin: auto;" /&gt;
 
@@ -589,10 +601,48 @@ output:
 ```
 
 - Criado por/Made by: [Emi Tanaka](https://github.com/emitanaka/ninja-theme)
+---
+class: middle
+## CSS
+- Utilizando o CSS, é possível adaptar os temas e também criá-los :)
+
+- No yaml, no atributo: `output: xaringan::moon_reader: css:` (onde definimos o nome dos temas), aponte o arquivo `.css` que deseja utilizar (entre aspas).
+
+- Para manter o diretório organizado, é aconselhável criar uma pasta chamada css e colocar os arquivos `.css` nessa pasta.
+
+
+- Exemplo: 
+
+
+```r
+output:
+  xaringan::moon_reader:
+    css: ["css/rladies.css", "css/rladies-fonts.css"]
+```
 
 ---
 class: middle
-## RemarkJS
+## CSS
+- Para adaptar algum tema (alterar estilos específicos):
+
+1 - Copie os arquivos originais do tema para a sua pasta `/css` (procure no seu diretório a pasta que contém os arquivos originais, geralmente estão em `libs/remark-css-0.0.1`);
+  
+2 - Especifique no `yaml` o nome e pasta dos arquivos novos. Exemplo: 
+
+
+```r
+output:
+  xaringan::moon_reader:
+    css: ["css/rladies.css", "css/rladies-fonts.css"]
+```
+  
+3 - Altere o código `.css` dos novos arquivos para personalizar a apresentação.
+  
+Dica: No navegador, o atalho `ctrl + shift + c` pode ajudar a inspecionar os elementos. 
+
+---
+class: middle
+## JavaScript - RemarkJS
 
 - O Xaringan utiliza o seguinte arquivo javascript: https://remarkjs.com/downloads/remark-latest.min.js
 
@@ -641,7 +691,8 @@ encoding: "UTF-8"
 output:
   xaringan::moon_reader:
     chakra: libs/remark-latest.min.js
-    css: [kunoichi, ninjutsu, rladies-fonts]
+    css: ["css/kunoichi.css", "css/ninjutsu.css", 
+          "css/rladies-fonts.css"]
     lib_dir: libs
     nature:
       highlightStyle: github
@@ -819,7 +870,7 @@ ggplot(data = mtcars, mapping = aes(x = wt, y = mpg)) + geom_point() +
   stat_smooth(method = 'lm') + facet_grid(am ~ cyl)
 ```
 
-&lt;img src="index_files/figure-html/unnamed-chunk-42-1.png" width="45%" style="display: block; margin: auto;" /&gt;
+&lt;img src="index_files/figure-html/unnamed-chunk-45-1.png" width="45%" style="display: block; margin: auto;" /&gt;
 
 Fonte do exemplo: http://stcorp.nl/R_course/tutorial_ggplot2.html
 
@@ -832,8 +883,8 @@ class: middle
 DT::datatable(rladies_br)
 ```
 
-<div id="htmlwidget-c8bebb089dce509eb82a" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-c8bebb089dce509eb82a">{"x":{"filter":"none","data":[["1","2","3","4","5","6","7","8","9","10"],["Florianópolis","Salvador","Niterói","Curitiba","Belo Horizonte","São Paulo","Porto Alegre","Natal","Americana","Rio de Janeiro"],["2019-04-07","2018-07-23","2018-06-04","2018-05-29","2018-04-20","2018-02-10","2017-10-30","2017-09-25","2017-06-24","2017-02-27"],[22,114,289,151,509,343,218,135,28,394]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>city<\/th>\n      <th>dt_created<\/th>\n      <th>members<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":3},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-9d30876c9c616b674a81" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-9d30876c9c616b674a81">{"x":{"filter":"none","data":[["1","2","3","4","5","6","7","8","9","10"],["Florianópolis","Salvador","Niterói","Curitiba","Belo Horizonte","São Paulo","Porto Alegre","Natal","Americana","Rio de Janeiro"],["2019-04-07","2018-07-23","2018-06-04","2018-05-29","2018-04-20","2018-02-10","2017-10-30","2017-09-25","2017-06-24","2017-02-27"],[22,114,289,151,509,343,218,135,28,394]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>city<\/th>\n      <th>dt_created<\/th>\n      <th>members<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":3},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
 ---
 class: middle
 ## Adicionando imagens usando o Knitr
@@ -959,7 +1010,7 @@ class: middle
 
 3) Coloque um nome e descrição no novo repositório e deixe-o público
 
-&lt;img src="img/github2.jpg" width="90%" style="display: block; margin: auto;" /&gt;
+&lt;img src="img/github2.jpg" width="80%" style="display: block; margin: auto;" /&gt;
 
 ---
 ## Compartilhando a apresentação via Github Pages
